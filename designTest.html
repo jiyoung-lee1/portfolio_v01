@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- head 안에 추가 -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+        .section-wrap {
+            padding: 80px 20px;
+            color: #fff;
+            background: #0b0c1c;
+            /* 우주 배경 톤 */
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        .section-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #7df9ff;
+            text-shadow: 0 0 5px #7df9ff;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skill-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80px;
+        }
+
+        .skill-item img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 8px;
+        }
+
+        .cert-list {
+            margin-top: 20px;
+            list-style: square;
+            padding-left: 20px;
+            color: #ccc;
+        }
+
+        .project-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .project-card {
+            flex: 1 1 300px;
+            padding: 20px;
+            border: 2px dashed #7df9ff;
+            background-color: #15162a;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.03);
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #7df9ff;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="about" class="section-wrap showUp">
+        <div class="section-inner">
+            <h2>🪐 About Me</h2>
+            <p>
+                출판 분야에서 소통의 힘을 경험했고,
+                이제는 웹이라는 더 넓은 공간에서 누구나 정보에 쉽게 접근할 수 있도록 돕고 싶습니다.<br>
+                커뮤니케이션이 중심인 웹퍼블리싱 분야에서
+                사용자 중심의 구조와 시각적 전달력을 갖춘 퍼블리셔가 되고자 합니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-wrap showUp">
+        <div class="section-inner">
+            <h2>🚀 Skills & Certificates</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+                    <span>HTML5</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+                    <span>CSS3</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        alt="JS" />
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
+                        alt="Photoshop" />
+                    <span>Photoshop</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                        alt="Figma" />
+                    <span>Figma</span>
+                </div>
+            </div>
+
+            <ul class="cert-list">
+                <li>웹디자인기능사</li>
+                <li>컴퓨터활용능력 2급</li>
+                <li>정보처리기사</li>
+                <li>포토샵 자격증</li>
+                <li>전자출판기능사</li>
+                <li>실용글쓰기 3급</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-wrap showUp">
+        <div class="section-inner">
+            <h2>👾 Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>네이버 클론코딩</h3>
+                    <p>HTML/CSS 중심의 구조 마크업 + 반응형 웹</p>
+                    <a href="#">👉 보기</a>
+                </div>
+                <div class="project-card">
+                    <h3>갤러그 인터랙션 페이지</h3>
+                    <p>우주 배경 + 마우스 커서 커스터마이징 + 총알 발사 기능</p>
+                    <a href="#">👉 보기</a>
+                </div>
+                <!-- 추가 프로젝트 카드 필요 시 복사 -->
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

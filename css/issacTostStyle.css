@@ -1,0 +1,372 @@
+:root {
+    --main-color: rgb(255, 40, 30);
+    --gray-color: rgba(34,34,34,0.7);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Pretendard', 'NEXON Lv1 Gothic OTF', 'Noto Sans KR', 'Lexend', Malgun Gothic, 'Malgun Gothic', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    color: #000;
+}
+
+a:hover {
+    color: var(--main-color);
+    transition: color 0.6s ease;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+h3{
+    font-size: 60px;
+    font-weight: 700;
+    font-family: var(--engFont);
+    letter-spacing: 0;
+    line-height: 120%;
+    word-break: keep-all;
+}
+#wrap {
+    width: 100%;
+    margin: 0 auto;
+    /* border: 2px solid red; */
+    min-width: 280px;
+    /* max-width: 1400px; */
+    position: relative;
+}
+
+#header {
+    /* border: 2px solid blue; */
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 112px;
+    z-index: 100;
+    background-color: #fff;
+    /* width: 70%; */
+    /* overflow: hidden; */
+}
+
+#header::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all .4s;
+    opacity: 0;
+}
+
+#header .header_in {
+    padding: 41px 25px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+}
+
+#header .w1350 {
+    max-width: 1400px;
+    padding: 0 25px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+    height: 112px;
+}
+
+#gnb {
+    /* border: 5px solid black; */
+    position: absolute;
+    right: 50%;
+    top: 0;
+    margin-right: -675px;
+    box-sizing: border-box;
+    height: 100%;
+    z-index: 100;
+}
+#gnb_bg {
+    position: absolute;
+    top: 100%; /* nav 바로 아래 */
+    left: 0;
+    width: 100%;
+    height: 220px; /* 기본은 안 보이게 */
+    background: #fff;
+    z-index: 100;
+    display: none;
+}
+
+#gnb ul {
+    display: flex;
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+    z-index: 100;
+}
+
+#gnb ul li {
+    padding: 0 20px;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+#gnb > ul > li > a {
+    display: block;
+    font-size: 20px;
+    line-height: 120%;
+    color: #111;
+    letter-spacing: -0.35pt;
+    padding: 44px 16px;
+    box-sizing: border-box;
+    position: relative;
+    transition: all .3s linear;
+    box-sizing: border-box;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+#gnb > ul > li:hover {
+   
+}
+#gnb > ul > li:hover >a{
+     color: var(--main-color);
+    transition: color 0.4s linear;
+    cursor: pointer;
+    border-bottom: 3px solid var(--main-color);
+}
+
+#gnb ul li dl {
+    display: none;
+    text-align:center;
+    position: relative;
+    /* margin-top: 10px; */
+    padding: 22px 0;
+    margin:0;
+}
+#gnb ul li dl dd a{
+    /* border: 2px solid red; */
+    width: 100%;
+    /* background-color: yellow; */
+    padding: 0 0 12px;
+    margin: 0;
+    color:var(--gray-color);
+}
+#gnb ul li dl dd a:hover{
+    color:var(--main-color);
+    font-weight: 700;
+    transition: all .6s;
+}
+
+/* 모바일 메뉴 */
+.header_mobile {
+    display: none;
+}
+
+#visual {
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+#visual .visual_in {
+    width: 100%;
+    height: 100vh;
+    /* border: 10px solid red; */
+    display: flex;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#visual .visual_in .roll {
+    /* border: 5px solid blue; */
+    width: 100%;
+    height: 100vh;
+    flex-shrink: 0;
+    /* 너비 줄어드는 것 방지 */
+    box-sizing: border-box;
+}
+
+#visual .visual_in .roll .bg {
+    width: 100%;
+    height: 100%;
+}
+
+#visual .visual_in .roll .bg h2 {}
+
+#visual .visual_in .roll .bg .v_bg {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -108px;
+}
+
+/* 모바일 */
+.m {
+    display: none;
+}
+
+#contents {}
+
+.com_pad {
+    padding: 160px 0;
+}
+#menu{
+    background-color: var(--main-color);
+}
+.center{
+    text-align: center;
+}
+#menu h3{
+    color:#fff;
+}
+#menu h3 img{
+    display: block;
+    margin: 0 auto 12px;
+    width: 60px;
+}
+.center {
+    text-align: center;
+}
+.tab_style{
+
+}
+.tab_style ul{
+    display: flex;
+    justify-content: center;
+    color: RGBA(255,255,255,0.5);
+    font-size: 18px;
+    line-height:40PX;
+    margin-top: 12px;
+}
+.tab_style ul li{
+    border-radius: 20px;
+    padding: 0px 18px;
+    margin: 0 6px;
+}
+.tab_style ul li.focus {
+    background: #AC130C;
+    color: #fff !important;
+    font-weight: 700;
+}
+.tab_style ul li:hover{
+    color: rgba(255,255,255,1);
+    transition: color 0.4s;
+}
+#contents h4 {
+    padding: 30px 0 14px;
+    color: #222;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+#contents .txt {
+    font-size: 1rem;
+    line-height: 29px;
+    color: rgba(34, 34, 34, 0.7);
+    font-weight: 400;
+}
+
+#contents .btnArea {
+    padding: 60px 0 0;
+}
+
+#contents .btnArea .moreBtn {
+    margin: 0 auto;
+    width: 200px;
+    height: 56px;
+    border-radius: 56px;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 0 30px;
+    transition: all .3s linear;
+    overflow: hidden;
+    position: relative;
+}
+
+#contents .btnArea .moreBtn::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #222;
+    box-sizing: border-box;
+    border-radius: 56px;
+    transition: all .3s linear;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#contents .btnArea .moreBtn:hover::before {
+
+    border: 2px solid var(--main-color);
+}
+
+#contents .btnArea .moreBtn:hover {
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+#contents .btnArea .moreBtn:hover span {
+    color: #fff;
+}
+
+#contents .btnArea .moreBtn span {
+    display: block;
+    width: 100%;
+    position: relative;
+    /* z-index: 2; */
+    font-size: 1rem;
+    color: #222;
+    line-height: 56px;
+    letter-spacing: -0.35pt;
+    transition: all .3s linear;
+}
+
+#quick {
+    position: fixed;
+    right: 25px;
+    bottom: 10%;
+    background: rgba(0, 0, 0, .88);
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 26px 10px;
+    text-align: center;
+}
+
+#quick a {
+    color: #fff;
+    font-size: 0.875rem;
+    line-height: 120%;
+
+}
+
+#quick a:hover {
+    color: var(--main-color);
+}

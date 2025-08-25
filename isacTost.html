@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이삭토스트</title>
+    <link rel="stylesheet" href="./css/issacTostStyle.css">
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+
+        <!-- Header -->
+        <header id="header">
+            <div id="gnb_bg"></div>
+            <div class="header_in w1350">
+                <h1><a href="/"><img src="/img/logo.svg" alt="이삭토스트" /></a></h1>
+                <p class="btnMenu_m menuBtn" title="메뉴">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </p>
+            </div>
+
+<script>
+    $(document).ready(function(){
+    $("#gnb ul li").hover(
+        function() {
+            // alert("올림");
+            $("#gnb ul li").find("dl").stop().slideDown(400);
+            $("#gnb_bg").stop().slideDown(400);
+        },
+        function() {
+            // alert("내림");
+            $("#gnb ul li").find("dl").stop().slideUp(400);
+             $("#gnb_bg").stop().slideUp(400);
+        }
+    );
+});
+</script>
+
+            <div id="gnb">
+                 
+                <ul>
+                    <li>
+                        <a href="/brand/story.php">브랜드</a>
+                        <dl>
+                            <!-- <dd><a href="/brand/isaac.php">(주)이삭</a></dd> -->
+                            <dd><a href="/brand/story.php">이삭토스트</a></dd>
+                            <dd><a href="/brand/ceo.php">CEO 인사말</a></dd>
+                            <dd><a href="/brand/anniversary.php">연혁</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="/menu/menu.php?ptype=list&catcode=10101000">메뉴</a>
+                        <!-- <dl>
+								<dd><a href="/menu/menu.php">토스트</a></dd>
+								<dd><a href="/menu/menu.php">음료</a></dd>
+								<dd><a href="/menu/menu.php">사이드</a></dd>
+							</dl> -->
+                    </li>
+                    <li>
+                        <a href="/social/social.php">사회공헌</a>
+                        <!-- <dl>
+								<dd><a href="/social/social.php">사회공헌</a></dd>
+							</dl> -->
+                    </li>
+                    <li>
+                        <a href="/community/notice.php">커뮤니티</a>
+                        <dl>
+                            <dd><a href="/community/notice.php">공지사항</a></dd>
+                            <dd><a href="/community/event.php">이벤트·뉴스</a></dd>
+                            <dd><a href="/community/delivery.php">든든 딜리버리</a></dd>
+                            <dd><a href="/community/campaign.php">기부 캠페인</a></dd>
+                            <dd><a href="/community/review.php">고객 리뷰</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="/customer/compliment.php">고객게시판</a>
+                        <dl>
+                            <dd><a href="/customer/compliment.php">매장 칭찬하기</a></dd>
+                            <dd><a href="/customer/faq.php">FAQ</a></dd>
+                            <dd><a href="/customer/inquiry.php">고객 문의</a></dd>
+                            <dd><a href="/other/alliance.php">제휴/제안</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <a href="/membership/consultation.php">가맹안내</a>
+                        <dl>
+                            <dd><a href="/membership/consultation.php">가맹 상담 신청</a></dd>
+                            <!-- <dd><a href="/membership/store.php">매장 찾기</a></dd> -->
+                            <dd><a href="/membership/costs.php">비용 및 절차</a></dd>
+                            <dd><a href="/membership/education.php">교육프로그램</a></dd>
+                            <dd><a href="/membership/interior.php">인테리어</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!--//Header -->
+
+
+        <!-- 모바일 Menu -->
+        <div id="menuArea" class="header_mobile" style="display:none;">
+            <div class="menuList">
+                <h2><a href="/"><img src="/img/logo.svg" alt="이삭토스트" /></a></h2>
+                <ul class="list">
+                    <li>
+                        <a class="dropdown-toggle">브랜드<span class="material-symbols-outlined">expand_more</span></a>
+                        <ul class="sMenu">
+                            <!-- <li><a href="/brand/isaac.php">(주)이삭</a></li> -->
+                            <li><a href="/brand/story.php">이삭토스트</a></li>
+                            <li><a href="/brand/ceo.php">CEO 인사말</a></li>
+                            <li><a href="/brand/anniversary.php">연혁</a></li>
+                            <!-- <li><a href="/brand/social.php">사회공헌</a></li> -->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/menu/menu.php?ptype=list&catcode=10101000">메뉴</a>
+                        <!-- <ul class="sMenu">
+								<li><a href="/menu/menu.php">토스트</a></li>
+								<li><a href="/menu/menu.php">음료</a></li>
+								<li><a href="/menu/menu.php">사이드</a></li>
+							</ul> -->
+                    </li>
+                    <li>
+                        <a href="/social/social.php">사회공헌</a>
+                        <!-- <ul class="sMenu">
+								<li><a href="/social/social.php">사회공헌</a></li>
+							</ul> -->
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle">커뮤니티<span class="material-symbols-outlined">expand_more</span></a>
+                        <ul class="sMenu">
+                            <li><a href="/community/notice.php">공지사항</a></li>
+                            <li><a href="/community/event.php">이벤트·뉴스</a></li>
+                            <li><a href="/community/delivery.php">든든 딜리버리</a></li>
+                            <li><a href="/community/campaign.php">기부 캠페인</a></li>
+                            <li><a href="/community/review.php">고객 리뷰</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle">고객게시판<span class="material-symbols-outlined">expand_more</span></a>
+                        <ul class="sMenu">
+                            <li><a href="/customer/compliment.php">매장 칭찬하기</a></li>
+                            <li><a href="/customer/faq.php">FAQ</a></li>
+                            <li><a href="/customer/inquiry.php">고객 문의</a></li>
+                            <li><a href="/other/alliance.php">제휴/제안</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle">가맹안내<span class="material-symbols-outlined">expand_more</span></a>
+                        <ul class="sMenu">
+                            <li><a href="/membership/consultation.php">가맹 상담 신청</a></li>
+                            <!-- <li><a href="/membership/store.php">매장 찾기</a></li> -->
+                            <li><a href="/membership/costs.php">비용 및 절차</a></li>
+                            <li><a href="/membership/education.php">교육프로그램</a></li>
+                            <li><a href="/membership/interior.php">인테리어</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="btnMenu_mClose"><span class="material-symbols-outlined">close</span></div>
+            </div>
+        </div>
+        <!-- //모바일 Menu -->
+
+
+        <!-- Visual -->
+        <div id="visual">
+            <div class="visual_in">
+                <div class="roll">
+                    <div class="bg pc">
+                        <h2 class="w1350"><img src="/admin/data/bbs/visual/S2506200517261_1.png" alt="복숭아잼 토스트" /></h2>
+                        <div class="v_bg" style="background-image:url('./img/S2506231019131_2.png');">
+                        </div>
+                    </div>
+                    <div class="bg m">
+                        <h2 class="w1350"><img src="/admin/data/bbs/visual/S2506200517261_3.png" alt="복숭아잼 토스트" /></h2>
+                        <div class="v_bg" style="background-image:url('/admin/data/bbs/visual/S2506200517261_4.png');">
+                        </div>
+                    </div>
+                </div>
+                <div class="roll">
+                    <div class="bg pc">
+                        <h2 class="w1350"><img src="/admin/data/bbs/visual/S2506160532592_1.png" alt="복숭아잼" /></h2>
+                        <div class="v_bg" style="background-image:url('/img/S2506160531274_2.jpg');">
+                        </div>
+                    </div>
+                    <div class="bg m">
+                        <h2 class="w1350"><img src="/admin/data/bbs/visual/S2506160532592_3.png" alt="복숭아잼" /></h2>
+                        <div class="v_bg" style="background-image:url('/admin/data/bbs/visual/S2506160531274_4.jpg');">
+                        </div>
+                    </div>
+                </div>
+                <div class="roll">
+                    <div class="bg pc">
+                        <h2 class="w1350"><img src="/admin/data/bbs/visual/S2504250148496_1.png" alt="계란후라이 토스트 " />
+                        </h2>
+                        <div class="v_bg" style="background-image:url('/img/S2506050258456_2.jpg');">
+                        </div>
+                    </div>
+                    <div class="bg m">
+                        <h2 class="w1350"><img src="/admin/data/bbs/visual/S2504250148496_3.png" alt="계란후라이 토스트 " />
+                        </h2>
+                        <div class="v_bg" style="background-image:url('/admin/data/bbs/visual/S2504250148496_4.jpg');">
+                        </div>
+                    </div>
+                </div>
+                <div class="roll">
+                    <div class="bg pc">
+                        <h2 class="w1350"><img src="/admin/data/bbs/visual/S2404220836243_1.png" alt="프렌치 토스트 2종 " />
+                        </h2>
+                        <div class="v_bg" style="background-image:url('/img/S2404220836243_2.jpg');">
+                        </div>
+                    </div>
+                    <div class="bg m">
+                        <h2 class="w1350"><img src="/admin/data/bbs/visual/S2404220836243_3.png" alt="프렌치 토스트 2종 " />
+                        </h2>
+                        <div class="v_bg" style="background-image:url('/admin/data/bbs/visual/S2404220836243_4.jpg');">
+                        </div>
+                    </div>
+                </div>
+                <div class="roll">
+                    <div class="bg pc">
+                        <h2 class="w1350"><img src="/admin/data/bbs/visual/S2502140437375_1.png" alt="에그마요 토스트 3종" />
+                        </h2>
+                        <div class="v_bg" style="background-image:url('/admin/data/bbs/visual/S2506160256085_2.jpg');">
+                        </div>
+                    </div>
+                    <div class="bg m">
+                        <h2 class="w1350"><img src="/admin/data/bbs/visual/S2502140549012_3.png" alt="에그마요 토스트 3종" />
+                        </h2>
+                        <div class="v_bg" style="background-image:url('/admin/data/bbs/visual/S2506160411076_4.jpg');">
+                        </div>
+                    </div>
+                </div>
+                <div class="roll">
+                    <div class="bg pc">
+                        <h2 class="w1350"><img src="/admin/data/bbs/visual/S2402190835396_1.png" alt="스크램블 토스트3종" />
+                        </h2>
+                        <div class="v_bg" style="background-image:url('/img/S2402190835396_2.jpg');">
+                        </div>
+                    </div>
+                    <div class="bg m">
+                        <h2 class="w1350"><img src="/admin/data/bbs/visual/S2402190836247_3.png" alt="스크램블 토스트3종" />
+                        </h2>
+                        <div class="v_bg" style="background-image:url('/admin/data/bbs/visual/S2402190836247_4.jpg');">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <a href="#contents" class="scr mouse_wheel">SCROLL DOWN<span
+                    class="material-symbols-outlined">expand_more</span></a>
+        </div>
+        <!--//Visual -->
+
+
+
+
+
+        <div id="contents">
+            <div id="brand" class="com_pad">
+                <div class="brand_in w1350 center">
+                    <!-- <div class="brand_tit" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-once="true"><img src="/img/brand_tit.svg" alt="Enjoy Sweet Day! Isaac Toast"/></div>
+				<h4 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true">이삭토스트와 함께한 달콤한 기억이 있나요?</h4>
+				<p class="txt" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-once="true">한 손에 담긴 든든한 한 끼, 한 입에 퍼지는 미소! <br/>오늘도 한 손에 담긴 따듯한 토스트로 마음을 전하고 나누며 고객님을 맞이할 준비를 합니다. <br/>어김없이 따듯한 토스트가 기다리는 곳, 이삭토스트 입니다.</p>
+				<div class="btnArea" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800" data-aos-once="true"><a href="/brand/story.php" class="moreBtn"><span>브랜드 스토리<svg viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 13.9997L11.6 12.5997L16.2 7.99969H0V5.99969H16.2L11.6 1.39969L13 -0.000305176L20 6.99969L13 13.9997Z"/></svg></span></a></div> -->
+                    <!-- Banner : Start -->
+
+                    <div class='brand_tit' data-aos='fade-up' data-aos-duration='1000' data-aos-delay='200'
+                        data-aos-once='true'><img src='/img/brand_2307050208522.svg'
+                            alt='Enjoy Sweet Day! Isaac Toast' /></div>
+                    <h4 data-aos='fade-up' data-aos-duration='1000' data-aos-delay='400' data-aos-once='true'>이삭토스트와 함께한
+                        달콤한 기억이 있나요?</h4>
+                    <p class='txt' data-aos='fade-up' data-aos-duration='1000' data-aos-delay='600'
+                        data-aos-once='true'>한 손에 담긴 든든한 한 끼, 한 입에 퍼지는 미소 <br />오늘도 한 손에 담긴 따듯한 토스트로 마음을 전하고 나누며 고객님을
+                        맞이할 준비를 합니다. <br />어김없이 따듯한 토스트가 기다리는 곳, 이삭토스트 입니다.</p>
+                    <div class='btnArea' data-aos='fade-up' data-aos-duration='1000' data-aos-delay='800'
+                        data-aos-once='true'><a href='/brand/story.php' class='moreBtn'><span>브랜드 스토리<svg
+                                    viewBox='0 0 20 14' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                                    <path
+                                        d='M13 13.9997L11.6 12.5997L16.2 7.99969H0V5.99969H16.2L11.6 1.39969L13 -0.000305176L20 6.99969L13 13.9997Z' />
+                                </svg></span></a></div>
+
+                    </tr>
+                    <tr>
+
+                        <!-- Banner : End -->
+                </div>
+            </div>
+            <div id="menu" class="com_pad">
+                <div class="menu_in w1350">
+                    <h3 class="center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                        data-aos-once="true"><img src="/img/icon.svg" alt="Isaac Toast Menu" />Isaac Toast Menu</h3>
+                    <div class="tab_style" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+                        data-aos-once="true">
+                        <ul>
+                            <li class="focus" data-tab="menu_10101000" onclick="moreBtn('10101000');">토스트</li>
+                            <li data-tab="menu_10101100" onclick="moreBtn('10101100');">세트메뉴</li>
+                            <li data-tab="menu_10101200" onclick="moreBtn('10101200');">사이드</li>
+                            <li data-tab="menu_10101300" onclick="moreBtn('10101300');">음료</li>
+                        </ul>
+                    </div>
+                    <div class="menubox_wrap" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"
+                        data-aos-once="true">
+                        <div id="menu_10101000" class="menu_box focus">
+                            <div class="menu_roll">
+                                <dl class="roll">
+                                    <a href="/menu/menu.php?ptype=view&prdcode=2404220003&catcode=10101000">
+                                        <dt>
+                                            <p class="icon">
+                                            </p>
+                                            <img class="img" src="/img/menu_blank.png"
+                                                style="background-image:url('/admin/data/product2/2404220003_M1.png');"
+                                                alt="" />
+                                        </dt>
+                                        <dd>
+                                            <h5>프렌치 햄치즈</h5>
+                                            <p>French Ham Cheese</p>
+                                        </dd>
+                                    </a>
+                                </dl>
+                                <dl class="roll">
+                                    <a href="/menu/menu.php?ptype=view&prdcode=2306210007&catcode=10101000">
+                                        <dt>
+                                            <p class="icon">
+                                            </p>
+                                            <img class="img" src="/img/menu_blank.png"
+                                                style="background-image:url('/admin/data/product2/2306210007_M1.png');"
+                                                alt="" />
+                                        </dt>
+                                        <dd>
+                                            <h5>햄치즈 토스트</h5>
+                                            <p>Ham Cheese</p>
+                                        </dd>
+                                    </a>
+                                </dl>
+                                <dl class="roll">
+                                    <a href="/menu/menu.php?ptype=view&prdcode=2306210009&catcode=10101000">
+                                        <dt>
+                                            <p class="icon">
+                                            </p>
+                                            <img class="img" src="/img/menu_blank.png"
+                                                style="background-image:url('/admin/data/product2/2306210009_M1.png');"
+                                                alt="" />
+                                        </dt>
+                                        <dd>
+                                            <h5>햄 스페셜 토스트</h5>
+                                            <p>Ham Special</p>
+                                        </dd>
+                                    </a>
+                                </dl>
+                                <dl class="roll">
+                                    <a href="/menu/menu.php?ptype=view&prdcode=2306210011&catcode=10101000">
+                                        <dt>
+                                            <p class="icon">
+                                            </p>
+                                            <img class="img" src="/img/menu_blank.png"
+                                                style="background-image:url('/admin/data/product2/2306210011_M1.png');"
+                                                alt="" />
+                                        </dt>
+                                        <dd>
+                                            <h5>베이컨 베스트</h5>
+                                            <p>Bacon Best</p>
+                                        </dd>
+                                    </a>
+                                </dl>
+                                <dl class="roll">
+                                    <a href="/menu/menu.php?ptype=view&prdcode=2306210030&catcode=10101000">
+                                        <dt>
+                                            <p class="icon">
+                                            </p>
+                                            <img class="img" src="/img/menu_blank.png"
+                                                style="background-image:url('/admin/data/product2/2306210030_M1.png');"
+                                                alt="" />
+                                        </dt>
+                                        <dd>
+                                            <h5>그릴드 불갈비</h5>
+                                            <p>Grilled Bulgalbi</p>
+                                        </dd>
+                                    </a>
+                                </dl>
+                                <dl class="roll">
+                                    <a href="/menu/menu.php?ptype=view&prdcode=2306210014&catcode=10101000">
+                                        <dt>
+                                            <p class="icon">
+                                            </p>
+                                            <img class="img" src="/img/menu_blank.png"
+                                                style="background-image:url('/admin/data/product2/2306210014_M1.png');"
+                                                alt="" />
+                                        </dt>
+                                        <dd>
+                                            <h5>베이컨 포테이토 피자</h5>
+                                            <p>Bacon Potato Pizza</p>
+                                        </dd>
+                                    </a>
+                                </dl>
+                                <dl class="roll">
+                                    <a href="/menu/menu.php?ptype=view&prdcode=2306210020&catcode=10101000">
+                                        <dt>
+                                            <p class="icon">
+                                            </p>
+                                            <img class="img" src="/img/menu_blank.png"
+                                                style="background-image:url('/admin/data/product2/2306210020_M1.png');"
+                                                alt="" />
+                                        </dt>
+                                        <dd>
+                                            <h5>햄치즈 포테이토</h5>
+                                            <p>Ham Cheese Potato</p>
+                                        </dd>
+                                    </a>
+                                </dl>
+                            </div>
+                        </div>
+                        <div id="menu_10101100" class="menu_box ">
+                            <div class="menu_roll">
+                                <dl class="roll">
+                                    <a href="/menu/menu.php?ptype=view&prdcode=2504240006&catcode=10101100">
+                                        <dt>
+                                            <p class="icon">
+                                                <img src="/img/new.svg" alt="new" />
+                                            </p>
+                                            <img class="img" src="/img/menu_blank.png"
+                                                style="background-image:url('/admin/data/product2/2504240006_M1.png');"
+                                                alt="" />
+                                        </dt>
+                                        <dd>
+                                            <h5>계란후라이 햄치즈 세트</h5>
+                                            <p>Fried Egg Ham Cheese Set </p>
+                                        </dd>
+                                    </a>
+                                </dl>
+                                <dl class="roll">
+                                    <a href="/menu/menu.php?ptype=view&prdcode=2504240002&catcode=10101100">
+                                        <dt>
+                                            <p class="icon">
+                                                <img src="/img/new.svg" alt="new" />
+                                            </p>
+                                            <img class="img" src="/img/menu_blank.png"
+                                                style="background-image:url('/admin/data/product2/2504240002_M1.png');"
+                                                alt="" />
+                                        </dt>
+                                        <dd>
+                                            <h5>계란후라이 스페셜 세트</h5>
+                                            <p>Fried Egg Special Set </p>
+                                        </dd>
+                                    </a>
+                                </dl>
+                                <dl class="roll">
+                                    <a href="/menu/menu.php?ptype=view&prdcode=2306260014&catcode=10101100">
+                                        <dt>
+                                            <p class="icon">
+                                            </p>
+                                            <img class="img" src="/img/menu_blank.png"
+                                                style="background-image:url('/admin/data/product2/2306260014_M1.png');"
+                                                alt="" />
+                                        </dt>
+                                        <dd>
+                                            <h5>햄치즈 토스트 세트</h5>
+                                            <p>Ham Cheese Set</p>
+                                        </dd>
+                                    </a>
+                                </dl>
+                            </div>
+                        </div>
+                        <div id="menu_10101200" class="menu_box ">
+                            <div class="menu_roll">
+                                <dl class="roll">
+                                    <a href="/menu/menu.php?ptype=view&prdcode=2411110005&catcode=10101200">
+                                        <dt>
+                                            <p class="icon">
+                                                <img src="/img/new.svg" alt="new" />
+                                            </p>
+                                            <img class="img" src="/img/menu_blank.png"
+                                                style="background-image:url('/admin/data/product2/2411110005_M1.png');"
+                                                alt="" />
+                                        </dt>
+                                        <dd>
+                                            <h5>어니언 포테이토 팝 </h5>
+                                            <p>Onion Potato Pop</p>
+                                        </dd>
+                                    </a>
+                                </dl>
+                                <dl class="roll">
+                                    <a href="/menu/menu.php?ptype=view&prdcode=2408090002&catcode=10101200">
+                                        <dt>
+                                            <p class="icon">
+                                            </p>
+                                            <img class="img" src="/img/menu_blank.png"
+                                                style="background-image:url('/admin/data/product2/2408090002_M1.png');"
+                                                alt="" />
+                                        </dt>
+                                        <dd>
+                                            <h5>치즈 팝</h5>
+                                            <p>Cheese Pop</p>
+                                        </dd>
+                                    </a>
+                                </dl>
+                                <dl class="roll">
+                                    <a href="/menu/menu.php?ptype=view&prdcode=2306210034&catcode=10101200">
+                                        <dt>
+                                            <p class="icon">
+                                            </p>
+                                            <img class="img" src="/img/menu_blank.png"
+                                                style="background-image:url('/admin/data/product2/2306210034_M1.png');"
+                                                alt="" />
+                                        </dt>
+                                        <dd>
+                                            <h5>포테이토 팝</h5>
+                                            <p>Potato Pop</p>
+                                        </dd>
+                                    </a>
+                                </dl>
+                            </div>
+                        </div>
+                        <div id="menu_10101300" class="menu_box ">
+                            <div class="menu_roll">
+                                <dl class="roll">
+                                    <a href="/menu/menu.php?ptype=view&prdcode=2307310001&catcode=10101300">
+                                        <dt>
+                                            <p class="icon">
+                                            </p>
+                                            <img class="img" src="/img/menu_blank.png"
+                                                style="background-image:url('/admin/data/product2/2307310001_M1.png');"
+                                                alt="" />
+                                        </dt>
+                                        <dd>
+                                            <h5>아메리카노</h5>
+                                            <p>Americano</p>
+                                        </dd>
+                                    </a>
+                                </dl>
+                                <dl class="roll">
+                                    <a href="/menu/menu.php?ptype=view&prdcode=2306270005&catcode=10101300">
+                                        <dt>
+                                            <p class="icon">
+                                            </p>
+                                            <img class="img" src="/img/menu_blank.png"
+                                                style="background-image:url('/admin/data/product2/2306270005_M1.png');"
+                                                alt="" />
+                                        </dt>
+                                        <dd>
+                                            <h5>아이스티</h5>
+                                            <p>Iced Tea</p>
+                                        </dd>
+                                    </a>
+                                </dl>
+                                <dl class="roll">
+                                    <a href="/menu/menu.php?ptype=view&prdcode=2306270004&catcode=10101300">
+                                        <dt>
+                                            <p class="icon">
+                                            </p>
+                                            <img class="img" src="/img/menu_blank.png"
+                                                style="background-image:url('/admin/data/product2/2306270004_M1.png');"
+                                                alt="" />
+                                        </dt>
+                                        <dd>
+                                            <h5>사이다 / 제로 사이다</h5>
+                                            <p>Cider / Zero Cider</p>
+                                        </dd>
+                                    </a>
+                                </dl>
+                                <dl class="roll">
+                                    <a href="/menu/menu.php?ptype=view&prdcode=2306270001&catcode=10101300">
+                                        <dt>
+                                            <p class="icon">
+                                            </p>
+                                            <img class="img" src="/img/menu_blank.png"
+                                                style="background-image:url('/admin/data/product2/2306270001_M1.png');"
+                                                alt="" />
+                                        </dt>
+                                        <dd>
+                                            <h5>콜라 / 제로 콜라</h5>
+                                            <p>Coke / Zero Coke</p>
+                                        </dd>
+                                    </a>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btnArea" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800"
+                        data-aos-once="true"><a href="/menu/menu.php?ptype=list&catcode=10101000"
+                            class="moreBtn w chglink"><span>더보기<svg viewBox="0 0 20 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13 13.9997L11.6 12.5997L16.2 7.99969H0V5.99969H16.2L11.6 1.39969L13 -0.000305176L20 6.99969L13 13.9997Z" />
+                                </svg></span></a></div>
+                </div>
+            </div>
+
+            <div id="news" class="com_pad">
+                <div class="news_in w1350">
+                    <h3 class="center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"
+                        data-aos-once="true">Isaac Toast News</h3>
+                    <div class="tab_style" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+                        data-aos-once="true">
+                        <ul>
+                            <li class="focus" data-tab="news1">전체</li>
+                            <li data-tab="news2">공지사항</li>
+                            <li data-tab="news3">이벤트</li>
+                        </ul>
+                    </div>
+
+                    <div class="newsbox_wrap" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"
+                        data-aos-once="true">
+                        <div id="news1" class="news_box focus">
+                            <div class="news_roll">
+
+                                <dl class="roll">
+                                    <a href="/community/notice.php?ptype=view&idx=1452&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/bbs/skin/bbsBasic/image/noimg.gif');"
+                                                alt="[당첨자 발표] 나만의 달콤 복숭아잼 레시피" /></dt>
+                                        <dd>
+                                            <h5>[당첨자 발표] 나만의 달콤 복숭아잼 레시피</h5>
+                                            <small class="date">2025.08.05</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+                                <dl class="roll">
+                                    <a href="/community/notice.php?ptype=view&idx=1451&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/bbs/skin/bbsBasic/image/noimg.gif');"
+                                                alt="[당첨자 발표] 복숭아잼 예약주문 이벤트" /></dt>
+                                        <dd>
+                                            <h5>[당첨자 발표] 복숭아잼 예약주문 이벤트</h5>
+                                            <small class="date">2025.07.29</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+                                <dl class="roll">
+                                    <a href="/community/notice.php?ptype=view&idx=1445&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/bbs/skin/bbsBasic/image/noimg.gif');"
+                                                alt="전참시에 나온 월클잼, 복숭아잼" /></dt>
+                                        <dd>
+                                            <h5>전참시에 나온 월클잼, 복숭아잼</h5>
+                                            <small class="date">2025.06.26</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+                                <dl class="roll">
+                                    <a href="/community/notice.php?ptype=view&idx=1430&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/bbs/skin/bbsBasic/image/noimg.gif');"
+                                                alt="진심을 가득 담은 달콤함, 복숭아잼 출시" /></dt>
+                                        <dd>
+                                            <h5>진심을 가득 담은 달콤함, 복숭아잼 출시</h5>
+                                            <small class="date">2025.06.16</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+                                <dl class="roll">
+                                    <a href="/community/notice.php?ptype=view&idx=1425&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/bbs/skin/bbsBasic/image/noimg.gif');"
+                                                alt="[당첨자 발표] 내가 가장 좋아하는 계란은? 이벤트" /></dt>
+                                        <dd>
+                                            <h5>[당첨자 발표] 내가 가장 좋아하는 계란은? 이벤트</h5>
+                                            <small class="date">2025.05.14</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+
+
+                                <dl class="roll">
+                                    <a href="/community/event.php?ptype=view&idx=1450&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/data/bbs/event/S2507290236345_1.png');"
+                                                alt="[인증 이벤트] 찐팬 찾기 프로젝트" /></dt>
+                                        <dd>
+                                            <h5>[인증 이벤트] 찐팬 찾기 프로젝트</h5>
+                                            <small class="date">2025-07-29</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+                                <dl class="roll">
+                                    <a href="/community/event.php?ptype=view&idx=1446&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/data/bbs/event/S2507040539302_1.jpg');"
+                                                alt="[후기 이벤트] 나만의 달콤 복숭아잼 레시피" /></dt>
+                                        <dd>
+                                            <h5>[후기 이벤트] 나만의 달콤 복숭아잼 레시피</h5>
+                                            <small class="date">2025-07-04</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+                                <dl class="roll">
+                                    <a href="/community/event.php?ptype=view&idx=1433&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/data/bbs/event/S2506180306481_1.png');"
+                                                alt="[이삭토스트 앱] 복숭아잼소스 무료 옵션 변경 이벤트" /></dt>
+                                        <dd>
+                                            <h5>[이삭토스트 앱] 복숭아잼소스 무료 옵션 변경 이벤트</h5>
+                                            <small class="date">2025-06-18</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+                                <dl class="roll">
+                                    <a href="/community/event.php?ptype=view&idx=1432&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/data/bbs/event/S2506180301591_1.png');"
+                                                alt="복숭아잼 예약 주문 이벤트" /></dt>
+                                        <dd>
+                                            <h5>복숭아잼 예약 주문 이벤트</h5>
+                                            <small class="date">2025-06-17</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+                                <dl class="roll">
+                                    <a href="/community/event.php?ptype=view&idx=1416&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/data/bbs/event/S2504280207296_1.jpg');"
+                                                alt="내가 가장 좋아하는 계란은?" /></dt>
+                                        <dd>
+                                            <h5>내가 가장 좋아하는 계란은?</h5>
+                                            <small class="date">2025-04-28</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+
+                            </div>
+                        </div>
+                        <div id="news2" class="news_box">
+                            <div class="news_roll">
+
+                                <dl class="roll">
+                                    <a href="/community/notice.php?ptype=view&idx=1452&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/bbs/skin/bbsBasic/image/noimg.gif');"
+                                                alt="[당첨자 발표] 나만의 달콤 복숭아잼 레시피" /></dt>
+                                        <dd>
+                                            <h5>[당첨자 발표] 나만의 달콤 복숭아잼 레시피</h5>
+                                            <small class="date">2025.08.05</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+                                <dl class="roll">
+                                    <a href="/community/notice.php?ptype=view&idx=1451&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/bbs/skin/bbsBasic/image/noimg.gif');"
+                                                alt="[당첨자 발표] 복숭아잼 예약주문 이벤트" /></dt>
+                                        <dd>
+                                            <h5>[당첨자 발표] 복숭아잼 예약주문 이벤트</h5>
+                                            <small class="date">2025.07.29</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+                                <dl class="roll">
+                                    <a href="/community/notice.php?ptype=view&idx=1445&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/bbs/skin/bbsBasic/image/noimg.gif');"
+                                                alt="전참시에 나온 월클잼, 복숭아잼" /></dt>
+                                        <dd>
+                                            <h5>전참시에 나온 월클잼, 복숭아잼</h5>
+                                            <small class="date">2025.06.26</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+                                <dl class="roll">
+                                    <a href="/community/notice.php?ptype=view&idx=1430&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/bbs/skin/bbsBasic/image/noimg.gif');"
+                                                alt="진심을 가득 담은 달콤함, 복숭아잼 출시" /></dt>
+                                        <dd>
+                                            <h5>진심을 가득 담은 달콤함, 복숭아잼 출시</h5>
+                                            <small class="date">2025.06.16</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+                                <dl class="roll">
+                                    <a href="/community/notice.php?ptype=view&idx=1425&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/bbs/skin/bbsBasic/image/noimg.gif');"
+                                                alt="[당첨자 발표] 내가 가장 좋아하는 계란은? 이벤트" /></dt>
+                                        <dd>
+                                            <h5>[당첨자 발표] 내가 가장 좋아하는 계란은? 이벤트</h5>
+                                            <small class="date">2025.05.14</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+
+                            </div>
+                        </div>
+                        <div id="news3" class="news_box">
+                            <div class="news_roll">
+
+                                <dl class="roll">
+                                    <a href="/community/event.php?ptype=view&idx=1450&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/data/bbs/event/S2507290236345_1.png');"
+                                                alt="[인증 이벤트] 찐팬 찾기 프로젝트" /></dt>
+                                        <dd>
+                                            <h5>[인증 이벤트] 찐팬 찾기 프로젝트</h5>
+                                            <small class="date">2025-07-29</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+                                <dl class="roll">
+                                    <a href="/community/event.php?ptype=view&idx=1446&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/data/bbs/event/S2507040539302_1.jpg');"
+                                                alt="[후기 이벤트] 나만의 달콤 복숭아잼 레시피" /></dt>
+                                        <dd>
+                                            <h5>[후기 이벤트] 나만의 달콤 복숭아잼 레시피</h5>
+                                            <small class="date">2025-07-04</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+                                <dl class="roll">
+                                    <a href="/community/event.php?ptype=view&idx=1433&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/data/bbs/event/S2506180306481_1.png');"
+                                                alt="[이삭토스트 앱] 복숭아잼소스 무료 옵션 변경 이벤트" /></dt>
+                                        <dd>
+                                            <h5>[이삭토스트 앱] 복숭아잼소스 무료 옵션 변경 이벤트</h5>
+                                            <small class="date">2025-06-18</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+                                <dl class="roll">
+                                    <a href="/community/event.php?ptype=view&idx=1432&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/data/bbs/event/S2506180301591_1.png');"
+                                                alt="복숭아잼 예약 주문 이벤트" /></dt>
+                                        <dd>
+                                            <h5>복숭아잼 예약 주문 이벤트</h5>
+                                            <small class="date">2025-06-17</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+                                <dl class="roll">
+                                    <a href="/community/event.php?ptype=view&idx=1416&category=">
+                                        <dt><img src="/img/news_blank.png"
+                                                style="background-image:url('/admin/data/bbs/event/S2504280207296_1.jpg');"
+                                                alt="내가 가장 좋아하는 계란은?" /></dt>
+                                        <dd>
+                                            <h5>내가 가장 좋아하는 계란은?</h5>
+                                            <small class="date">2025-04-28</small>
+                                        </dd>
+                                    </a>
+                                </dl>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="banner">
+                <!-- <div class="bg" style="background: url(/img/banner_bg.jpg) no-repeat center/cover;"></div>
+			<div class="banner_in">
+				<div class="ellipse" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true">
+					<div class="tit_area">
+						<h3>with <br/>Isaac Toast</h3>
+						<h4>이삭토스트와 달콤한 동행을 함께할 <br/>가맹점주님을 모집합니다.</h4>
+						<div class="btnArea"><a href="/membership/consultation.php" class="moreBtn w"><span>가맹 문의하기<svg viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 13.9997L11.6 12.5997L16.2 7.99969H0V5.99969H16.2L11.6 1.39969L13 -0.000305176L20 6.99969L13 13.9997Z"/></svg></span></a></div>
+					</div>
+				</div>
+			</div> -->
+                <!-- Banner : Start -->
+
+                <div class='bg'
+                    style='background: url(/admin/data/banner/banner_2501171042339.jpg) no-repeat center/cover;'></div>
+                <div class='banner_in'>
+                    <div class='ellipse' data-aos='fade-right' data-aos-duration='1000' data-aos-delay='500'
+                        data-aos-once='true'>
+                        <div class='tit_area'>
+                            <h3>with <br />Isaac Toast</h3>
+                            <h4>이삭토스트와 달콤한 동행을 함께할 <br />가맹점주님을 모집합니다.</h4>
+                            <div class='btnArea'><a href='/membership/consultation.php' class='moreBtn w'><span>가맹
+                                        문의하기<svg viewBox='0 0 20 14' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                                            <path
+                                                d='M13 13.9997L11.6 12.5997L16.2 7.99969H0V5.99969H16.2L11.6 1.39969L13 -0.000305176L20 6.99969L13 13.9997Z' />
+                                        </svg></span></a></div>
+                        </div>
+                    </div>
+                </div>
+
+                </tr>
+                <tr>
+
+                    <!-- Banner : End -->
+            </div>
+        </div>
+
+        <script>
+            function moreBtn(catcode) {
+                $('.chglink').attr("href", "/menu/menu.php?ptype=list&catcode=" + catcode);
+            }
+            let lastScroll = 0;
+            const header = document.getElementById('header');
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.scrollY;
+
+                if (currentScroll > lastScroll) {
+                    // 아래로 스크롤
+                    header.classList.remove('show');
+                    header.classList.add('hide');
+                } else {
+                    // 위로 스크롤
+                    header.classList.add('show');
+                }
+
+                lastScroll = currentScroll;
+            });
+
+            let navAr = document.querySelector("header ul");
+           
+            navAr.onmouseover = () => {
+                // document.querySelector("#header").classList("show").add;
+                // alert("올림");
+            };
+            navAr.onmouseout = () => {
+                // document.querySelector("#header").classList("hide").add;
+            };
+        </script>
+
+
+        <div class="popup_zone ver2">
+            <article>
+                <div class="popup_inner">
+                    <div><a
+                            href="https://www.isaac-toast.co.kr/community/notice.php?ptype=view&idx=1452&page=1&code=notice"><img
+                                src="https://www.isaac-toast.co.kr:443/admin/data/webedit/2508/20250806091759_eowzxnic.jpg"
+                                alt="" /></a></div>
+                    <div><a
+                            href="https://www.isaac-toast.co.kr/community/event.php?ptype=view&idx=1450&page=1&code=event"><img
+                                src="https://www.isaac-toast.co.kr:443/admin/data/webedit/2507/20250729155317_xfmoilwa.png"
+                                alt="" /></a></div>
+                    <div><a
+                            href="https://www.isaac-toast.co.kr/community/notice.php?ptype=view&idx=1451&page=1&code=notice"><img
+                                src="https://www.isaac-toast.co.kr:443/admin/data/webedit/2507/20250729162917_plykllpn.png"
+                                alt="" /></a></div>
+                    <div><a href="https://www.isaac-toast.co.kr/menu/menu.php?ptype=list&catcode=10101000"><img
+                                src="https://www.isaac-toast.co.kr:443/admin/data/webedit/2506/20250622150107_kswztiyr.png"
+                                alt="" /></a></div>
+                    <div><a
+                            href="https://www.isaac-toast.co.kr/community/notice.php?ptype=view&idx=1168&page=1&code=notice"><img
+                                src="https://www.isaac-toast.co.kr:443/admin/data/webedit/2502/20250207180143_mpcqtfln.jpg"
+                                alt="" /></a></div>
+                </div>
+                <div class="popup_nav">
+                    <div class="li">나만의 달콤 복숭아잼 레시피 이벤트 당첨자 발표</div>
+                    <div class="li">찐팬 찾기 프로젝트</div>
+                    <div class="li">복숭아잼 예약주문 이벤트 당첨자 발표</div>
+                    <div class="li">복숭아토스트</div>
+                    <div class="li">해외,국내 가맹 출점 불가 지역 안내</div>
+                </div>
+                <ul class="popupClose">
+                    <li><input type="button" id="popup_close" onClick="rpopupClose();" value="24시간동안 열지않음" /></li>
+                    <li><input type="button" onClick="rpopupClose2();" value="모두닫기" /></li>
+                </ul>
+
+                <!-- <div class="popup_close"><input type="checkbox" id="popup_close" onClick="rpopupClose();"> <font color=#cbced2 >오늘하루 열지않음</font> <input type="image" onClick="rpopupClose2();" src="/popup/popup_close.gif" align="absmiddle"></div> -->
+            </article>
+        </div>
+
+
+        <script type="text/javascript">
+            $(document).on('ready', function () {
+                $(".popup_inner").slick({
+                    dots: false,
+                    infinite: true,
+                    arrows: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 8000,
+                    speed: 1500,
+                    adaptiveHeight: true,
+                    asNavFor: '.popup_nav',
+                });
+                $(".popup_nav").slick({
+                    dots: false,
+                    infinite: true,
+                    arrows: false,
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    asNavFor: '.popup_inner',
+                    autoplay: true,
+                    autoplaySpeed: 8000,
+                    speed: 1500,
+                    focusOnSelect: true
+                });
+            });
+
+            function rreadCookie(cookiename) {
+                var Found = false;
+
+                cookiedata = document.cookie;
+                if (cookiedata.indexOf(cookiename) >= 0) {
+                    Found = true;
+                }
+
+                return Found;
+            }
+
+            function rsetCookie(name, value, expiredays) {
+                var todayDate = new Date();
+                todayDate.setDate(todayDate.getDate() + expiredays);
+                document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+                $(".popup_zone").remove();
+            }
+
+            function rpopupClose() {
+                /*
+                if($("#popup_close").prop("checked") == true){
+                    rsetCookie("popupDayClose", "true", 1);
+                } else {
+                    rsetCookie("popupDayClose", "true", -1);
+                }*/
+                rsetCookie("rpopupDayClose", "true", 1);
+            }
+
+            function rpopupClose2() {
+                $(".popup_zone").remove();
+            }
+
+            if (rreadCookie('rpopupDayClose')) {
+                $(".popup_zone").remove();
+            }
+        </script>
+
+
+
+        <script type="text/javascript">
+            // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+            let vh = window.innerHeight * 0.01;
+            // Then we set the value in the --vh custom property to the root of the document
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+            // We listen to the resize event
+            window.addEventListener('resize', () => {
+                // We execute the same script as before
+                let vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+            });
+        </script>
+
+
+
+
+
+
+
+
+        <div id="quick">
+            <ul>
+                <li class="topBtn"><a id="topBtn" href="#top" class="eng bold ls0"><span></span>TOP</a></li>
+                <li class="instagram"><a href="https://www.instagram.com/isaactoast.official/"
+                        target="_blank"><span></span>인스타그램</a></li>
+                <li class="inquiry"><a href="/customer/inquiry.php"><span></span>고객문의</a></li>
+                <li class="proposal"><a href="/other/alliance.php"><span></span>제휴/제안</a></li>
+                <li class="consultation"><a href="/membership/consultation.php"><span></span>가맹상담<br />1833-9299</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- Footer -->
+        <div id="footer">
+            <div class="footer_in w1350">
+                <div class="foot_menu swiper-container sub-menu-list-container">
+                    <ul class="swiper-wrapper">
+                        <!-- <li class="swiper-slide"><a href="/customer/inquiry.php">고객문의</a></li>
+					 <li class="swiper-slide"><a href="/other/alliance.php">제휴/제안</a></li> -->
+                        <li class="on swiper-slide"><a href="/other/privacy.php">개인정보처리방침</a></li>
+                        <li class="swiper-slide"><a href="/other/policy.php">이용약관</a></li>
+                        <li class="swiper-slide"><a href="/other/email.php">이메일무단수집거부</a></li>
+                    </ul>
+                </div>
+                <div class="foot_in">
+                    <h2><img src="/img/foot_logo.svg" alt="isaac toast" /></h2>
+                    <div class="foot_info">
+                        <dl class="sns">
+                            <dd class="facebook"><a href="https://www.facebook.com/isaactoast.online"
+                                    target="_blank">페이스북</a></dd>
+                            <dd class="instagram"><a href="https://www.instagram.com/isaactoast.official/"
+                                    target="_blank">인스타그램</a></dd>
+                            <dd class="blog"><a href="https://blog.naver.com/isaac-toast" target="_blank">블로그</a></dd>
+                        </dl>
+                        <ul>
+                            <li><strong class="isaac">(주)이삭</strong><strong>사업자등록번호 : <font class="ls0">305-81-70958
+                                    </font></strong><strong>대표 : 김하경 </strong></li>
+                            <li class="contact"><strong>가맹문의</strong></span class="ls0"><span><img
+                                        src="/img/call_icon.svg" alt="전화" /><b>1833-9299</b></span></li>
+                            <li class="contact"><strong>서울사업본부</strong><span>서울특별시 송파구 중대로 97 효원빌딩 6층 13층</span><span
+                                    class="ls0"><img src="/img/call_icon.svg" alt="전화" />02-6959-1086</span></li>
+                            <li class="contact"><strong>대전사무실</strong><span>대전광역시 중구 산서로 53번길 11</span><span
+                                    class="ls0"><img src="/img/call_icon.svg" alt="전화" />042-274-3060</span></li>
+                            <li class="contact"><strong>대구사무실</strong><span>대구광역시 수성구 동대구로 376 범어숲화성파크드림S 상가 225호</span
+                                    class="ls0"><span><img src="/img/call_icon.svg" alt="전화" />053-746-3060</span></li>
+                        </ul>
+                        <p class="copyright">COPYRIGHT © ISAAC. ALL RIGHTS RESERVED. <span>Designed by <a
+                                    href="https://www.web2002.co.kr/" target="_blank">Threeway</a></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//Footer -->
+
+        <link rel="stylesheet" href="/comm/css/swiper-bundle.min.css" />
+        <script src="/comm/js/swiper-bundle.min.js"></script>
+        <script type="text/javascript">
+            var mySwiper = undefined;
+            sub_num = 01;
+            initSwiper();
+            function initSwiper() {
+
+                var currentItemIndex = $('.foot_menu .swiper-slide.hover').index(),
+                    initialSlideIndex = currentItemIndex - 1 < 0 ? 0 : currentItemIndex - 1;
+
+                var screenWidth = $(window).width();
+                if (screenWidth < 801 && mySwiper == undefined) {
+                    mySwiper = new Swiper('.sub-menu-list-container', {
+                        initialSlide: sub_num - 1,
+                        slidesPerView: 'auto',
+                        paginationClickable: true,
+                        spaceBetween: 0,
+                        loop: false,
+                        initialSlide: initialSlideIndex, //시작되는 위치 제일처음이 0임
+                    });
+                } else if (screenWidth > 800 && mySwiper != undefined) {
+                    mySwiper.destroy();
+                    mySwiper = undefined;
+                    jQuery('.sub-menu-list-container .swiper-wrapper').removeAttr('style');
+                    jQuery('.sub-menu-list-container .swiper-slide').removeAttr('style');
+                }
+            }
+
+            //Swiper plugin initialization on window resize
+            $(window).on('resize', function () {
+                initSwiper();
+            });
+        </script>
+
+        <script>
+            AOS.init();
+        </script>
+
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75478473-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-75478473-1');
+        </script>
+
+
+
+
+
+
+    </div>
+    <!-- //wrap -->
+</body>
+
+</html>

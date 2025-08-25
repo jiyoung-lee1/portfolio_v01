@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #0d1b2a;
+
+        }
+
+        .snap-container {
+            height: 100vh;
+            /* 브라우저 전체 높이 */
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            /* 세로 스크롤 스냅 */
+            scroll-behavior: smooth;
+            /* 부드럽게 이동 */
+        }
+
+        .snap-section {
+            height: 100vh;
+            /* 화면 하나를 꽉 채움 */
+            scroll-snap-align: start;
+            /* 섹션의 시작을 기준으로 맞춤 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+        }
+
+        /* 예시 색상 */
+        .section1 {
+            background: #0d1b2a;
+            color: white;
+            margin-bottom: 500vh;
+        }
+
+        .section2 {
+            background: #1b263b;
+            color: white;
+        }
+
+        .section3 {
+            background: #415a77;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="snap-container">
+        <section class="snap-section section1">Section 1</section>
+        <section class="snap-section section2">Section 2</section>
+        <section class="snap-section section3">Section 3</section>
+    </main>
+</body>
+
+</html>

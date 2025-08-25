@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jstest</title>
+    <style>
+        #wrap{
+            width: 80%;
+            margin: 0 auto;
+        }
+        h1{
+            text-align: center;
+            padding: 15px 0;
+        }
+        
+        p{
+            width: 100%;
+            padding: 10px 0;
+            background-color: #dedede;
+            margin:0;
+        }
+        p:hover{
+            background-color: #9c9c9c;
+            font-weight:500;
+        }
+        form{
+            text-align: center;
+            margin: 0;
+            padding: 5px 0;
+            vertical-align: middle;
+        }
+        #item{
+            width: 400px;
+            padding: 5px 0;
+            font-size:1.3rem;
+            display: inline-block;
+            margin: 0;
+        }
+        #add{
+            display: inline-block;
+            margin: 0;
+            padding: 5px 0;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>여행 준비물 점검 목록</h1>
+        <form>
+            <input type="text" id="item" autofocus="true">
+            <button type="button" id="add" class="addBtn">추가</button>
+        </form>
+        <div id="result">
+
+        </div>
+        <script>
+            var dataList = [];
+            var addBtn = document.querySelector("#add");
+            addBtn.addEventListener("click",addList);
+
+            function addList(){
+                var item = document.querySelector("#item").value;
+                if(item != null) {
+                    dataList.push(item);
+                    document.querySelector("#item").value="";
+                    document.querySelector("#item").focus();
+                    
+                }
+            }
+            function inputData() {
+                var answer = prompt("추가할 데이터 입력");
+                var lastNum = dataList.length;
+                var result;
+                dataList.push(answer);
+                alert(dataList.length);
+                for (let i = 0; i < dataList.length; i++) {
+                    result += "<p>" + dataList[i] + "</p>";
+                }
+
+                    document.querySelector("#result").innerHTML = result;
+
+            }
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Galaga Mini Demo</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      cursor: url('galaga-cursor.png') 16 16, auto;
+      background: black;
+    }
+
+    .bullet {
+      position: fixed;
+      width: 6px;
+      height: 20px;
+      background: #0ff;
+      border-radius: 3px;
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+    .enemy {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      background: red;
+      border-radius: 5px;
+      z-index: 999;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  let mouseX = 0;
+  let mouseY = 0;
+  let shooting = false;
+
+  // 마우스 위치 추적
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  // 총알 발사
+  function shootBullet(x, y) {
+    const bullet = document.createElement('div');
+    bullet.className = 'bullet';
+    bullet.style.left = `${x}px`;
+    bullet.style.top = `${y}px`;
+    document.body.appendChild(bullet);
+
+    let bulletY = y;
+
+    const interval = setInterval(() => {
+      bulletY -= 10;
+      bullet.style.top = `${bulletY}px`;
+
+      // 충돌 체크
+      document.querySelectorAll('.enemy').forEach(enemy => {
+        const eRect = enemy.getBoundingClientRect();
+        const bRect = bullet.getBoundingClientRect();
+
+        const isHit = !(eRect.right < bRect.left || eRect.left > bRect.right ||
+                        eRect.bottom < bRect.top || eRect.top > bRect.bottom);
+
+        if (isHit) {
+          enemy.remove();
+          bullet.remove();
+          clearInterval(interval);
+        }
+      });
+
+      // 화면 밖으로 나가면 제거
+      if (bulletY < -20) {
+        bullet.remove();
+        clearInterval(interval);
+      }
+    }, 16);
+  }
+
+  // 연속 발사
+  function startShooting() {
+    if (shooting) return;
+    shooting = true;
+    const interval = setInterval(() => {
+      if (!shooting) {
+        clearInterval(interval);
+        return;
+      }
+      shootBullet(mouseX, mouseY);
+    }, 200); // 연사 속도 조절
+  }
+
+  document.addEventListener('mousedown', startShooting);
+  document.addEventListener('mouseup', () => shooting = false);
+
+  // 적기 생성
+  function spawnEnemy() {
+    const enemy = document.createElement('div');
+    enemy.className = 'enemy';
+    const startX = Math.random() * (window.innerWidth - 40);
+    enemy.style.left = `${startX}px`;
+    enemy.style.top = `-40px`;
+    document.body.appendChild(enemy);
+
+    let y = -40;
+
+    const interval = setInterval(() => {
+      y += 2;
+      enemy.style.top = `${y}px`;
+
+      if (y > window.innerHeight) {
+        enemy.remove();
+        clearInterval(interval);
+      }
+    }, 16);
+  }
+
+  // 적기 계속 생성
+  setInterval(spawnEnemy, 1000); // 1초마다 적 등장
+</script>
+
+</body>
+</html>
