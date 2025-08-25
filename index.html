@@ -2,744 +2,316 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
-    <title>NAVER</title>
-    <style>
-        :root {
-            --color_title: #080808;
-            --color_title_rgb: 8, 8, 8;
-            --color_body: #101010;
-            --color_body_rgb: 16, 16, 16;
-            --color_caption1: #404040;
-            --color_caption1_rgb: 64, 64, 64;
-            --color_caption2: #606060;
-            --color_caption2_rgb: 96, 96, 96;
-            --color_caption3: #555558;
-            --color_caption3_rgb: 85, 85, 88;
-            --color_search: #000;
-            --color_search_rgb: 0, 0, 0;
-            --color_border_out: #e3e5e8;
-            --color_border_out_rgb: 227, 229, 232;
-            --color_border_in: #ebebeb;
-            --color_border_in_rgb: 235, 235, 235;
-            --color_border_in_divider: #ebebeb;
-            --color_border_in_divider_rgb: 235, 235, 235;
-            --color_border_in_exception: #ebebeb;
-            --color_border_in_exception_rgb: 235, 235, 235;
-            --color_button_border: #dadcdf;
-            --color_button_border_rgb: 218, 220, 223;
-            --color_dot_divider: #d3d5d7;
-            --color_dot_divider_rgb: 211, 213, 215;
-            --color_block_bg: #fff;
-            --color_block_bg_rgb: 255, 255, 255;
-            --color_board_bg: #f4f6fa;
-            --color_board_bg_rgb: 244, 246, 250;
-            --color_option_bg: #f5f7f8;
-            --color_option_bg_rgb: 245, 247, 248;
-            --color_login_bg: #fafbfb;
-            --color_login_bg_rgb: 250, 251, 251;
-            --color_menu_widget_bg: #fff;
-            --color_menu_widget_bg_rgb: 255, 255, 255;
-            --color_setting_bg: #fff;
-            --color_setting_bg_rgb: 255, 255, 255;
-            --color_button1_bg: #fff;
-            --color_button1_bg_rgb: 255, 255, 255;
-            --color_button2_bg: #fff;
-            --color_button2_bg_rgb: 255, 255, 255;
-            --color_news: #3a67ea;
-            --color_news_rgb: 58, 103, 234;
-            --color_news_econ_stay: #909aab;
-            --color_news_econ_stay_rgb: 144, 154, 171;
-            --color_news_econ_down: #4f67d6;
-            --color_news_econ_down_rgb: 79, 103, 214;
-            --color_live_news_price: #f4361e;
-            --color_live_news_price_rgb: 244, 54, 30;
-            --color_enter: #e538e2;
-            --color_enter_rgb: 229, 56, 226;
-            --color_enter_bg: #f2f1fb;
-            --color_enter_bg_rgb: 242, 241, 251;
-            --color_sports: #1f65ef;
-            --color_sports_rgb: 31, 101, 239;
-            --color_sports_bg: #f4f7fe;
-            --color_sports_bg_rgb: 244, 247, 254;
-            --color_econ: #008f76;
-            --color_econ_rgb: 0, 143, 118;
-            --color_calendar: #eb5b5b;
-            --color_calendar_rgb: 235, 91, 91;
-            --color_dic: #031f5f;
-            --color_dic_rgb: 3, 31, 95;
-            --color_shop: #9858f5;
-            --color_shop_rgb: 152, 88, 245;
-        }
-
-        *,
-        html,
-        body,
-        form,
-        ul {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-size: 10.5px;
-            font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
-        }
-
-        button {
-            border: none;
-            background: none;
-        }
-
-        #wrap {
-            width: 100%;
-            height: 2897.2px;
-        }
-
-        #wrap-center {
-            width: 1280px;
-            height: 100%;
-            margin: 0 auto;
-            /* border: 2px solid black; */
-        }
-
-        #header {
-            width: 100%;
-            height: 215px;
-            position: relative;
-            text-align: center;
-        }
-
-        #header-burger,
-        #header-naverpay,
-        #header-talk,
-        #header-notice,
-        #header-shopping {
-            width: 48px;
-            height: 48px;
-            padding: 8px;
-            border: none;
-            background: none;
-            cursor: pointer;
-            position: absolute;
-        }
-
-        #header>button:hover {
-            border-radius: 50%;
-            background-color: #e7eced;
-        }
-
-        #header>button>div {
-            width: 32px;
-            height: 32px;
-            background-image: url(./sp_main.png);
-            background-size: 468px 456px;
-        }
-
-        .blind {
-            position: absolute;
-            clip: rect(0 0 0 0);
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            overflow: hidden;
-        }
-
-        #header-burger {
-            top: 5px;
-            left: -10px;
-        }
-
-        #header-burger>div {
-            background-position: -311px -151px;
-        }
-
-        #header-naverpay {
-            top: 5px;
-            left: 41px;
-        }
-
-        #header-naverpay>div {
-            background-position: 0px -318px;
-        }
-
-        #header-talk {
-            top: 5px;
-            right: 94px;
-        }
-
-        #header-talk>div {
-            background-position: -132px -318px;
-        }
-
-        #header-notice {
-            top: 5px;
-            right: 42px;
-        }
-
-        #header-notice>div {
-            background-position: -311px -217px;
-        }
-
-        #header-shopping {
-            top: 5px;
-            right: -10px;
-        }
-
-        #header-shopping>div {
-            background-position: -66px -318px;
-        }
-
-        #search {
-            position: relative;
-            z-index: 120;
-            height: 156px;
-            padding: 52px 0 8px;
-            /* background-color: orange; */
-            /* border: 2px solid blue; */
-
-        }
-
-        #search>form {
-            position: absolute;
-            top: 52px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 706px;
-            height: 61px;
-            border: 1px solid #03c75a;
-            border-radius: 33px;
-            background-color: #fff;
-            text-align: left;
-            display: inline-flex;
-
-        }
-
-        #search>form:hover {
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12);
-        }
-
-        #search-input {
-            width: 480px;
-            height: 58px;
-            line-height: 24px;
-            font-weight: 700;
-            font-size: 2rem;
-            color: #000;
-            letter-spacing: -0.4px;
-            font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
-            /* height: 100%; */
-            padding: 17px 0;
-            border: none;
-            margin: 0;
-            outline: none;
-            background: none;
-            position: relative;
-            top: -3px;
-        }
-
-        #search-input::placeholder {
-            color: white;
-        }
-
-        #search-input:hover::placeholder {
-            color: #e4e4e4;
-        }
-
-        #search>form a {
-            width: 67px;
-            height: 58px;
-            padding: 17px 16px 17px 27px;
-            display: inline-block;
-        }
-
-        #search>form svg {
-            width: 24px;
-            height: 24px;
-            fill: #03c75a;
-        }
-
-        #search-right {
-            display: inline-block;
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
-            align-items: stretch;
-        }
-
-        #search-keyboard::before,
-        #search-recent::before {
-            content: "";
-            display: block;
-            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.6bbd194f.png);
-            background-size: 468px 456px;
-            background-repeat: no-repeat;
-            cursor: pointer;
-        }
-
-        #search-keyboard {
-            width: 30px;
-            height: 58px;
-            padding: 22px 3px;
-        }
-
-        #search-keyboard::before {
-            background-position: -273px -279px;
-            width: 24px;
-            height: 14px;
-        }
-
-        #search-recent {
-            width: 22px;
-            height: 58px;
-            padding: 26px 6px;
-        }
-
-        #search-recent::before {
-            background-position: -344px -45px;
-            width: 10px;
-            height: 6px;
-        }
-
-        #search-button {
-            width: 62px;
-            height: 58px;
-            padding: 17px 27px 16px 10px;
-        }
-
-        #search-button path {
-            width: 25px;
-            height: 25px;
-            /* padding: 17px 27px 16px 10px; */
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visual Archive</title>
+    <link rel="stylesheet" href="testStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Jersey+10&family=Noto+Sans+KR:wght@100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <script>
+        // preloader
+        setTimeout(() => {
+            const loading = document.querySelector('.loading');
+            loading.style.opacity = 0;
+
+            // opacity가 0으로 된 후 display:none 처리 (0.5초 뒤)
+            setTimeout(() => {
+                loading.style.display = 'none';
+                document.querySelector('#wrap').style.display = 'block';
+            }, 0);
+        }, 2000);
+        // preloader 잠시 감추기 위해 100 시작하려면 2000
+
+        //cursor
+        let mouseX = 0;
+        let mouseY = 0;
+
+        // 마우스 위치 저장
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        // 총알 발사 함수
+        function shootBullet(x, y) {
+            const bullet = document.createElement('div');
+            bullet.className = 'bullet';
+            bullet.style.left = `${x}px`;
+            bullet.style.top = `${y}px`;
+            document.body.appendChild(bullet);
+
+            let bulletY = y;
+
+            const bulletInterval = setInterval(() => {
+                bulletY -= 10;
+                bullet.style.top = `${bulletY}px`;
+
+                if (bulletY < -20) {
+                    bullet.remove();
+                    clearInterval(bulletInterval);
+                }
+            }, 16);
+        }
+        // 클릭 시 총알 발사
+        document.addEventListener('click', () => {
+            shootBullet(mouseX, mouseY);
+        });
+
+        // 아래서 위로 서서히 드러나는 효과
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        // 한번 보이면 관찰 해제 (한 번만 애니메이션 줄 경우)
+                        observer.unobserve(entry.target);
+                    }
+                    else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, {
+                threshold: 0.6 // 요소가 60% 보이면 동작
+            });
+
+            // 모든 .showUp 요소에 대해 observer 연결
+            document.querySelectorAll('.showUp').forEach(el => observer.observe(el));
+        });
+    </script>
+    <div class="loading">
+    </div>
     <div id="wrap">
-        <div id="wrap-center">
-            <header id="header">
-                <button id="header-burger">
-                    <div></div>
-                    <span class="blind">확장 영역</span>
-                </button>
-                <button id="header-naverpay">
-                    <div></div>
-                    <span class="blind">네이버 페이</span>
-                </button>
-                <button id="header-talk">
-                    <div></div>
-                    <span class="blind">네이버 톡</span>
-                </button>
-                <button id="header-notice">
-                    <div></div>
-                    <span class="blind">알람</span>
-                </button>
-                <button id="header-shopping">
-                    <div></div>
-                    <span class="blind">쇼핑</span>
-                </button>
-
-                <div id="search">
-                    <form action="">
-                        <a href="#">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"></path>
-                            </svg>
-                        </a>
-                        <label for="search-input" class="blind">검색어 입력</label>
-                        <input id="search-input" type="text" placeholder="검색어를 입력하세요.">
-                        <div id="search-right">
-                            <button href="#" id="search-keyboard">
-                                <span class="blind">입력도구</span>
-                            </button>
-                            <button href="#" id="search-recent">
-                                <span class="blind">자동완성/최근검색어펼치기</span>
-                            </button>
-                            <button id="search-button">
-                                <svg id="search-btn" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
-                                    style="fill: #03c75a">
-                                    <path
-                                        d="M22.13.5c11.378 0 20.632 9.256 20.632 20.63 0 4.699-1.566 9.155-4.439 12.782l10.164 10.165a2.41 2.41 0 0 1-1.706 4.115 2.412 2.412 0 0 1-1.706-.705L33.31 35.719a2.41 2.41 0 0 1 0-3.41 15.71 15.71 0 0 0 4.628-11.178c0-8.718-7.09-15.808-15.807-15.808-8.718 0-15.808 7.09-15.808 15.808 0 7.15 4.817 13.43 11.714 15.273a2.41 2.41 0 0 1 1.705 2.954 2.41 2.41 0 0 1-2.95 1.705C7.788 38.658 1.5 30.46 1.5 21.131 1.5 9.756 10.756.5 22.13.5zm4.716 34.746a3.483 3.483 0 1 1 0 6.966 3.483 3.483 0 0 1 0-6.966z">
-                                    </path>
-                                </svg>
-
-                                <div><span class="blind">검색</span></div>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <style>
-                    #nav {
-                        position: absolute;
-                        bottom: 20px;
-                        left: 50%;
-                        transform: translate(-50%);
-                    }
-
-                    #nav>ul {
-                        display: flex;
-                        justify-content: center;
-                    }
-
-                    #nav li {
-                        list-style: none;
-                        /* border: 1px solid blue; */
-                        width: 64px;
-                    }
-
-                    #nav li a {
-                        display: block;
-                        width: 64px;
-                        height: 68px;
-                        font-weight: 500;
-                        font-size: 1.4rem;
-                        color: rgb(16, 16, 16);
-                        text-decoration: none;
-                        line-height: 20px;
-                        /* background-color: white; */
-                    }
-
-                    #nav li a:hover {
-                        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12);
-                    }
-
-                    #nav li a div {
-                        width: 40px;
-                        height: 40px;
-                        /* display: inline-block; */
-                        /* border: 1px solid red; */
-                        margin: 0 auto;
-                        position: relative;
-                    }
-
-                    #nav li a .service-name {
-                        display: block;
-                        font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
-                        font-size: 14px;
-                        line-height: 20px;
-                        font-weight: 500;
-                        margin: 4px 0 0;
-                    }
-
-                    #nav li a div::before {
-                        content: "";
-                        display: inline-block;
-                        z-index: 10;
-                        /* top: -1px;
-                        left: -5px; */
-                        position: absolute;
-                        top: -2px;
-                        left: 50%;
-                        transform: translate(-50%);
-                        background-image: url(https://pm.pstatic.net/resources/asset/sp_main.6bbd194f.png);
-                        background-size: 468px 456px;
-                        background-position: -153px -142px;
-                        background-repeat: no-repeat;
-                        width: 50px;
-                        height: 50px;
-                    }
-
-                    #nav li a div::after {
-                        display: inline-block;
-                        content: '';
-                        background-image: url(https://pm.pstatic.net/resources/asset/sp_main.6bbd194f.png);
-                        background-size: 468px 456px;
-                        background-position: -205px -219px;
-                        background-repeat: no-repeat;
-                        width: 40px;
-                        height: 40px;
-                        position: absolute;
-                        top: 0px;
-                        left: 50%;
-                        transform: translate(-50%);
-                        z-index: 10;
-                    }
-
-                    #nav li:nth-of-type(1) a div::after {
-                        background-position: -205px -219px;
-                    }
-
-                    #nav li:nth-of-type(2) a div::after {
-                        background-position: -41px -219px;
-                    }
-
-                    #nav li:nth-of-type(3) a div::after {
-                        background-position: 0px -219px;
-                    }
-
-                    #nav li:nth-of-type(4) a div::after {
-                        background-position: -41px -260px;
-                    }
-
-                    #nav li:nth-of-type(5) a div::after {
-                        background-position: -270px -205px;
-                    }
-
-                    #nav li:nth-of-type(6) a div::after {
-                        background-position: -123px -260px;
-                    }
-
-                    #nav li:nth-of-type(7) a div::after {
-                        background-position: 0px -260px;
-                    }
-
-                    #nav li:nth-of-type(8) a div::after {
-                        background-position: -270px 0px;
-                    }
-
-                    #nav li:nth-of-type(9) a div::after {
-                        background-position: -164px -260px;
-                    }
-
-                    #nav li:nth-of-type(11) a div::after {
-                        background-position: -270px -164px;
-                    }
-                </style>
-                <nav id="nav">
+        <!-- 헤더 -->
+        <header id="header">
+            <div class="container">
+                <h1 class="logo showUp"><a href="#"><span>jeong's portfolio</span></a></h1>
+                <nav class="main-nav">
                     <ul>
-                        <li>
-                            <a href="#">
-                                <div></div>
-                                <span class="service-name">메일</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div></div>
-                                <span class="service-name">카페</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div></div>
-                                <span class="service-name">블로그</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div></div>
-                                <span class="service-name">스토어</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div></div>
-                                <span class="service-name">뉴스</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div></div>
-                                <span class="service-name">증권</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div></div>
-                                <span class="service-name">부동산</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div></div>
-                                <span class="service-name">지도</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div></div>
-                                <span class="service-name">웹툰</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span style="display:block; width: 40px; height: 40px; margin: 0 auto;">
-                                    <img src="https://s.pstatic.net/static/www/mobile/edit/20250717_1095/upload_17527539374578qf6x.png"
-                                        width="40" height="40" class="service_img" alt="신분증">
-                                </span>
-                                <span class="service-name">신분증</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div></div>
-                                <span class="service-name">더보기</span>
-                            </a>
-                        </li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skill">Skills + Certifications</a></li>
+                        <li><a href="#archive">Archive</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-            </header>
-            <style>
-                #main {
-                    display: flex;
-                    /* margin-top: 62px; */
-                    /* background-color: #008f76; */
-                    height: 100%;
-                }
-
-                #main-left {
-                    width: 830px;
-                    margin-right: 30px;
-                }
-
-                #main-right {
-                    width: 420px;
-                }
-
-                #main-left-ad {
-                    height: 130px;
-                    padding-right: 20px;
-                }
-
-                #main-right-ad01 {
-                    height: 240px;
-                    padding: 18px 18px 0;
-                }
-
-                #main-right-ad02 {
-                    width: 420px;
-                    height: 80px;
-                    overflow: hidden;
-                }
-
-                #main-right-ad02 img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-
-                #main-right-ad03 {
-                    height: 172px;
-                    padding: 18px;
-                }
-
-                #main-newstand {
-                    margin-top: 16px;
-                    height: 426px;
-                }
-
-                #main-shopping {
-                    height: 560px;
-                }
-
-                #main-login {
-                    height: 164px;
-                    padding: 21px 20px 18px;
-                }
-
-                #main-login .login-txt {
-                    font-size: 1.4rem;
-                    line-height: 20px;
-                    font-weight: 500;
-                    text-align: center;
-                    height: 20px;
-                }
-
-                #main-login .login-button {
-                    color: #fff;
-                    background-color: #03c75a;
-                    text-align: center;
-                    display: block;
-                    width: 100%;
-                    height: 56px;
-                    margin: 13px 0 0;
-                    padding: 17px 0;
-                    font-size: 1.5rem;
-                    font-weight: 500;
-                    line-height: 20px;
-                    border: 1px solid rgba(0, 0, 0, .06);
-                    border-radius: 4px;
-                    text-decoration: none;
-                }
-
-                #main-login .login-button .login-logo {
-                    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.6bbd194f.png);
-                    background-size: 468px 456px;
-                    background-position: -130px -301px;
-                    background-repeat: no-repeat;
-                    width: 72px;
-                    height: 14px;
-                    display: inline-block;
-                    margin: 3px 8px 0 0;
-                    vertical-align: top;
-                }
-
-                #main-login .login-button:hover {
-                    background-color: #17b75e;
-                }
-
-                .box {
-                    box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, .04);
-                    border-radius: 8px;
-                    margin-bottom: 16px;
-                }
-
-                #main-weather {
-                    height: 236px;
-                    padding: 0 18px;
-                }
-
-                #main-stock {
-                    height: 236px;
-                    padding: 0 18px;
-                }
-
-                #main-weather>header,
-                #main-stock>header {
-                    height: 52px;
-                    padding: 6px 0;
-                    font-size: 16px;
-                    font-weight: 800;
-                    line-height: 40px;
-                    color: rgb(8, 8, 8);
-                }
-
-                #main-weather>div,
-                #main-stock>div {
-                    border: 1px solid var(--color_border_in);
-                }
-
-                #main-right-ad04 {
-                    height: 240px;
-                    padding: 18px 18px 0;
-                }
-
-                #main-right-widget {
-                    height: 516px;
-                }
-            </style>
-            <main id="main">
-                <div id="main-left">
-                    <aside id="main-left-ad" class="box"></aside>
-                    <section id="main-newstand" class="box"></section>
-                    <section id="main-shopping" class="box"></section>
+            </div>
+        </header>
+        <main id="main">
+        <!-- 메인 비주얼 -->
+        <section class="main-visual">
+            <video src="bg.mp4" autoplay muted loop></video>
+            <div id="main-inner">
+                <div id="main-img-wrap">
+                    <img src="" alt="">
                 </div>
-                <div id="main-right">
-                    <section id="main-login" class="box">
-                        <p class="login-txt">네이버를 더 안전하고 편리하게 이용하세요</p>
-                        <a href="#" class="login-button"><i class="login-logo"></i>로그인</button></a>
-                    </section>
-                    <aside id="main-right-ad01" class="box">01</aside>
-                    <aside id="main-right-ad02" class="box">
-                        <img src="https://s.pstatic.net/static/www/mobile/edit/20250805_1095/upload_1754369573904JZpiG.png"
-                            alt="네이버 광고">
-                    </aside>
-                    <aside id="main-right-ad03" class="box">03</aside>
-                    <section id="main-weather" class="box">
-                        <header>날씨</header>
-                        <div></div>
-                    </section>
-                    <section id="main-stock" class="box">
-                        <header>증권</header>
-                        <div></div>
-                    </section>
-                    <aside id="main-right-ad04" class="box"></aside>
-                    <section id="main-right-widget" class="box"></section>
-
+                <div id="main-text-wrap">
+                    <h2>welcome my space!</h2>
+                    <p></p>
                 </div>
-            </main>
-        </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <!-- 피그마에서 제작한 소개시안 가로 스크롤로 넣기, swipe사용해서 -->
+        <section id="about" class="section-wrap">
+            <div class="section-inner showUp">
+                <h2>About</h2>
+                <div class="flex">
+                    <p class="img">
+                        <img src="./profile_img.png" alt="프로필이미지">
+                    </p>
+                    <p class="txt">
+                        <span>" 전달되는 웹을 제작하는 웹 퍼블리셔 "</span>
+                        디지털 시대에서 웹은 필수적인 커뮤니케이션 매체가 되었습니다</br>
+                        웹퍼블리셔라는 직업을 통해<br>
+                        많은 사람들이 원하는 정보를 잘 전달할 수 있도록 
+                        웹을 구현하는 일에 매력을 느꼈습니다.<br>
+                        특히 소외된 사용자들도 차별 없이 웹을 이용할 수 있도록, </br>
+                        웹접근성과 사용자 경험을 고려한 마크업을 중시하며,</br>
+                        단순히 보이는 웹이 아닌 ‘전달되는 웹’을 만드는 것을 목표로 하고 있습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skill" class="section-wrap">
+            <div class="section-inner showUp">
+                <!-- Skill -->
+            <div id="skills">
+                    <h2>Skills</h2>
+                    <ul class="skills-grid">
+                        <li class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                alt="HTML" />
+                            <span>HTML5</span>
+                        </li>
+                        <li class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                alt="CSS" />
+                            <span>CSS3</span>
+                        </li>
+                        <li class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                alt="JS" />
+                            <span>JavaScript</span>
+                        </li>
+                        <li class="skill-item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
+                            <span>react</span>
+                        </li>
+                        <li class="skill-item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" />
+                            <span>Photoshop</span>
+                        </li>
+                        <li class="skill-item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-original.svg" />
+                            <span>illust</span>
+                        </li>
+                        <li class="skill-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                                alt="Figma" />
+                            <span>Figma</span>
+                        </li>
+                          <li class="skill-item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/excel/excel-original.svg" />
+                            <span>excel</span>
+                        </li>
+                        <li class="skill-item">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualbasic/visualbasic-original.svg" />
+                            <span>visualbasic</span>
+                        </li>
+                        <li class="skill-item">
+
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
+                            <span>github</span>
+                        </li>
+                    </ul>
+               
+                </div>
+            <div id="Certificates">
+                    <h2>Certificates</h2>
+                    <ul class="certifcates">
+                        <li class="certificate">
+                            웹개발디자인
+                        </li>
+                        <li class="certificate">
+                            정보처리기사
+                        </li>
+                        <li class="certificate">
+                            GTQ 1급
+                        </li>
+                        <li class="certificate">
+                            전자출판기능사
+                        </li>
+                        <li class="certificate">
+                            컴퓨터활용능력2급
+                        </li>
+                        <li class="certificate">
+                            실용글쓰기3급
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Archive -->
+        <section id="archive" class="section-wrap">
+            <div class="section-inner showUp">
+                <h2>Archive</h2>
+                <div class="card-grid">
+                    <!-- 반복 요소 예시 -->
+                    <article class="card">
+                        <div class="card-info overlay">
+                            <h3>네이버</h3>
+                            <p>#Clone Coding #HTML #CSS #JS</p>
+                        </div>
+                        <div class="card-img">
+                          <!-- <img src="assets/images/sample1.jpg" alt="감정 이미지" /> -->
+                        </div>
+                        <div class="card-button overlay">
+                            <p>바로가기</p>
+                        </div>
+                    </article>
+                   <article class="card">
+                        <div class="card-info overlay">
+                            <h3>이삭토스트</h3>
+                            <p>#Clone Coding #HTML #CSS #JS</p>
+                        </div>
+                        <div class="card-img">
+                          <!-- <img src="assets/images/sample1.jpg" alt="감정 이미지" /> -->
+                        </div>
+                        <div class="card-button overlay">
+                            <p>바로가기</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-info overlay">
+                            <h3>이지트립</h3>
+                            <p>#Clone Coding #HTML #CSS #JS</p>
+                        </div>
+                        <div class="card-img">
+                          <!-- <img src="assets/images/sample1.jpg" alt="감정 이미지" /> -->
+                        </div>
+                        <div class="card-button overlay">
+                            <p>바로가기</p>
+                        </div>
+                    </article>
+                   
+                    <!-- 더 많은 카드들... -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section-wrap">
+            <div class="section-inner showUp">
+                <h2>Contact</h2>
+                <p>읽어주셔서 감사합니다</p>
+                <ul class="sns-links">
+                    <li><a href="#">ghqkdaos4767@naver.com</a></li>
+                    <li><a href="#">GitHub</a></li>
+                </ul>
+                <p>Portfolio by jiyoung.</p>
+            </div>
+        </section>
+
+
+
+        <!-- 테스트 -->
+        <section id="test" class="xscroll">
+            <div class="xscroll-iner">
+                <div class="panel">피그마 소개 페이지 들어갈 곳</div>
+                <div class="panel">About 2</div>
+                <div class="panel">About 3</div>
+                <!-- 원하는 만큼 -->
+            </div>
+            <!-- </section>
+    <div class="section-inner">
+      <h2>About</h2>
+      <p>이 사이트는 감정과 기억을 시각적으로 정리한 아카이브입니다.</p>
+    </div> -->
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <p>&copy; 2025 Visual Archive. All rights reserved.</p>
+        </footer>
+
+        <script src="js/script.js"></script>
+        </main>
     </div>
 </body>
 
