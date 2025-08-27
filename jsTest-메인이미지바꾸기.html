@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            margin:0;
+            padding:0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            color: #000;
+        }
+        #wrap{
+            height: 100vh;
+            overflow: hidden;
+        }
+        h1{
+            padding: 20px;
+        }
+        main{
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+        }
+        .img-area{
+            /* width: 40%; */
+            padding: 20px;
+        }
+        
+        .img-area #main-img-wrap{
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+        }
+        .img-area p.img{
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        .img-area #main-img-wrap p.img img{
+            width: 500px;
+            height: 500px;
+        }
+        
+        .img-area #imgs-wrap{
+            margin: 30px 0 auto;
+            display: flex;
+        }
+        .img-area #imgs-wrap p.img{
+            width: 180px;
+            height: 180px;
+            margin:5px;
+        }
+        .img-area #imgs-wrap p.img img{
+            width: 180px;
+            height: 180px;
+        }
+        .img-area #imgs-wrap p.img:hover{
+            opacity: 0.6;
+        }
+        /* .img-area #imgs-wrap p:nth-of-type(1){
+            background-image: url(./test2.jpg);
+        }
+        .img-area #imgs-wrap p:nth-of-type(2){
+            background-image: url(./test3.jpg);
+        }
+        .img-area #imgs-wrap p:nth-of-type(3){
+            background-image: url(./test4.jpg);
+        } */
+        .text-area{
+            /* width: 60%; */
+            padding: 40px 20px;
+            font-size: 1.3rem;
+            line-height: 2.5rem;
+            position:relative;
+            margin-left: 40px;
+        }
+        .text-wrap{
+            margin-bottom: 30px;
+
+        }
+        button.bag{
+            padding: 5px 100px;
+            font-size: 1.3rem;
+        }
+        p.detail{
+            position: absolute;
+            bottom: 30px;
+        }
+        p.detail a{
+            color:#767676;
+            letter-spacing: 0.02rem;
+
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <h1>에디오피아 게뎁</h1>
+    <main>
+        <section class="img-area">
+            <div id="main-img-wrap">
+                <p class="img">
+                    <img src="/test1.jpg" alt="">
+                </p>
+            </div>
+            <div id="imgs-wrap">
+                <p class="img">
+                    <img src="/test2.jpg" alt="">
+                </p>
+                <p class="img">
+                    <img src="/test3.jpg" alt="">
+                </p>
+                <p class="img">
+                    <img src="/test4.jpg" alt="">
+                </p>
+            </div>
+        </section>
+        <section class="text-area">
+            <div class="text-wrap">
+                <p>상품명: 에디오피아 게뎁</p>
+                <p>판매가: 9,000원</p>
+                <p>배송비: 3,000원</p>
+                <p>50,000원 이상 구매시 무료</p>
+                <p>적립금: 180원</p>
+                <p>로스팅: 2019.06.17</p>
+            </div>
+            <button class="bag">장바구니 담기</button>
+           <p class="detail"><a href="#">상세 설명 보기</a></p> 
+        </section>
+    </main>
+</div>
+    <script>
+        let mainImg = document.querySelector("#main-img-wrap p.img img");
+        let imgs = document.querySelectorAll(".img-area #imgs-wrap p.img img");
+        let mainImgsrc = mainImg.getAttribute("src");
+        for(let i=0;i<imgs.length;i++){
+            imgs[i].onclick = changeImg;
+        }
+        function changeImg(){
+           mainImg.setAttribute("src",this.src);
+           this.setAttribute("src",mainImgsrc);
+           mainImg = document.querySelector("#main-img-wrap p.img img");
+           mainImgsrc = mainImg.getAttribute("src");
+        }
+
+    </script>
+</body>
+</html>
