@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <style>
+        body {
+            background-color: #000;
+        }
+
+        .character-box {
+            /* border: 3px solid #fff; */
+            /* height: 1000px; */
+            /* display: flex; */
+            padding: 100px 0;
+            /* flex-character-box: character-box; */
+        }
+
+        .egg {
+            box-sizing: border-box;
+            /* margin: 0 auto; */
+            /* display: block; */
+            /* width: 300px; */
+            /* width: 20%; */
+            aspect-ratio: 5/6;
+            /* height: 360px; */
+            /* background-color: rgba(255, 255, 255, ); */
+            border: solid 3px #ffffff;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .egg:hover {
+            transform: scale(1.1);
+            transition: .6s;
+            animation: vibration .1s infinite;
+
+        }
+
+        .egg:hover span {
+            display: block;
+        }
+
+        .egg:hover img {
+            width: 70%;
+            /* width: 300px; */
+        }
+
+        .egg span {
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            font-size: 2rem;
+            left: 50%;
+            top: 10%;
+            transform: translate(-50%);
+            display: none;
+        }
+
+        .egg img {
+            width: 200px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* object-fit: contain; */
+        }
+        .character-box { 
+            overflow: hidden !important;
+            padding: 0 70px;
+        }
+        .slick-prev {
+            position:absolute;
+            top:50%;
+            padding: 30px 30px;
+            z-index:20;
+            opacity: 0;
+            cursor: pointer;
+
+        }
+        .slick-next {
+            position: absolute;
+            top: 50%;
+            right: 70px;
+            /* width:0px; */
+            /* height:0px; */
+        }
+        .slick-prev::after {
+            content: "";
+            width:100px;
+            height:100px;
+            position:absolute;
+            top:0;
+            left:0;
+            background-color:red;
+            border-radius: 100% 0 0 100%;
+        }
+        .con {
+            border: 3px solid #fff;
+            width: 80%;
+            height: 0;
+            margin: 50px auto 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .con:hover {
+            height: 800px;
+            transition: .8s;
+        }
+
+        .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            border: 2px solid white;
+            opacity: 0.8;
+        }
+
+        .close:before,
+        .close:after {
+            position: absolute;
+            /* left: 15px; */
+            top: 0;
+            left: 0;
+            content: ' ';
+            height: 40px;
+            width: 2px;
+            background-color: #ffffff;
+        }
+
+        .close:before {
+            transform: rotate(45deg);
+        }
+
+        .close:after {
+            transform: rotate(-45deg);
+        }
+
+        @keyframes vibration {
+            from {
+                transform: rotate(2deg);
+            }
+
+            to {
+                transform: rotate(-2deg);
+            }
+        }
+    #progress {
+        display: block;
+        position: relative;
+        margin-bottom: 17px;
+        appearance: none;
+        width: 80%;
+        margin: 0 auto;
+
+      }
+      #progress::-webkit-progress-bar {
+        background: #f0f0f0;
+        border-radius: 12px;
+        border: 1px solid #eeeeee;
+        height: 28px;
+        overflow: hidden;
+      }
+
+      #progress::-webkit-progress-value {
+        background: var(--main-color);
+        border-radius: 0px;
+        height: 20px;
+        width: 48px;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="character-box">
+        <div class="egg">
+            <span>click</span>
+            <img src="./img/character01-1.png" alt="">
+        </div>
+        <div class="egg">
+            <img src="./img/character01-1.png" alt="">
+        </div>
+        <div class="egg">
+            <img src="./img/character01-1.png" alt="">
+        </div>
+        <div class="egg">
+            <img src="./img/character01-1.png" alt="">
+        </div>
+        <div class="egg">
+            <img src="./img/character01-1.png" alt="">
+        </div>
+    </div>
+    <progress class="progress" id="progress" value="70" min="0" max="100"></progress>
+
+    <div class="con">
+        <div class="close"></div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.character-box').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                responsive: [
+                    { 
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+
+</html>
+

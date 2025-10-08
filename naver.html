@@ -5,314 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/naverStyle.css">
     <title>NAVER</title>
-    <style>
-        :root {
-            --color_title: #080808;
-            --color_title_rgb: 8, 8, 8;
-            --color_body: #101010;
-            --color_body_rgb: 16, 16, 16;
-            --color_caption1: #404040;
-            --color_caption1_rgb: 64, 64, 64;
-            --color_caption2: #606060;
-            --color_caption2_rgb: 96, 96, 96;
-            --color_caption3: #555558;
-            --color_caption3_rgb: 85, 85, 88;
-            --color_search: #000;
-            --color_search_rgb: 0, 0, 0;
-            --color_border_out: #e3e5e8;
-            --color_border_out_rgb: 227, 229, 232;
-            --color_border_in: #ebebeb;
-            --color_border_in_rgb: 235, 235, 235;
-            --color_border_in_divider: #ebebeb;
-            --color_border_in_divider_rgb: 235, 235, 235;
-            --color_border_in_exception: #ebebeb;
-            --color_border_in_exception_rgb: 235, 235, 235;
-            --color_button_border: #dadcdf;
-            --color_button_border_rgb: 218, 220, 223;
-            --color_dot_divider: #d3d5d7;
-            --color_dot_divider_rgb: 211, 213, 215;
-            --color_block_bg: #fff;
-            --color_block_bg_rgb: 255, 255, 255;
-            --color_board_bg: #f4f6fa;
-            --color_board_bg_rgb: 244, 246, 250;
-            --color_option_bg: #f5f7f8;
-            --color_option_bg_rgb: 245, 247, 248;
-            --color_login_bg: #fafbfb;
-            --color_login_bg_rgb: 250, 251, 251;
-            --color_menu_widget_bg: #fff;
-            --color_menu_widget_bg_rgb: 255, 255, 255;
-            --color_setting_bg: #fff;
-            --color_setting_bg_rgb: 255, 255, 255;
-            --color_button1_bg: #fff;
-            --color_button1_bg_rgb: 255, 255, 255;
-            --color_button2_bg: #fff;
-            --color_button2_bg_rgb: 255, 255, 255;
-            --color_news: #3a67ea;
-            --color_news_rgb: 58, 103, 234;
-            --color_news_econ_stay: #909aab;
-            --color_news_econ_stay_rgb: 144, 154, 171;
-            --color_news_econ_down: #4f67d6;
-            --color_news_econ_down_rgb: 79, 103, 214;
-            --color_live_news_price: #f4361e;
-            --color_live_news_price_rgb: 244, 54, 30;
-            --color_enter: #e538e2;
-            --color_enter_rgb: 229, 56, 226;
-            --color_enter_bg: #f2f1fb;
-            --color_enter_bg_rgb: 242, 241, 251;
-            --color_sports: #1f65ef;
-            --color_sports_rgb: 31, 101, 239;
-            --color_sports_bg: #f4f7fe;
-            --color_sports_bg_rgb: 244, 247, 254;
-            --color_econ: #008f76;
-            --color_econ_rgb: 0, 143, 118;
-            --color_calendar: #eb5b5b;
-            --color_calendar_rgb: 235, 91, 91;
-            --color_dic: #031f5f;
-            --color_dic_rgb: 3, 31, 95;
-            --color_shop: #9858f5;
-            --color_shop_rgb: 152, 88, 245;
-        }
-
-        *,
-        html,
-        body,
-        form,
-        ul {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-size: 10.5px;
-            font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
-        }
-
-        button {
-            border: none;
-            background: none;
-        }
-
-        #wrap {
-            width: 100%;
-            height: 2897.2px;
-        }
-
-        #wrap-center {
-            width: 1280px;
-            height: 100%;
-            margin: 0 auto;
-            /* border: 2px solid black; */
-        }
-
-        #header {
-            width: 100%;
-            height: 215px;
-            position: relative;
-            text-align: center;
-        }
-
-        #header-burger,
-        #header-naverpay,
-        #header-talk,
-        #header-notice,
-        #header-shopping {
-            width: 48px;
-            height: 48px;
-            padding: 8px;
-            border: none;
-            background: none;
-            cursor: pointer;
-            position: absolute;
-        }
-
-        #header>button:hover {
-            border-radius: 50%;
-            background-color: #e7eced;
-        }
-
-        #header>button>div {
-            width: 32px;
-            height: 32px;
-            background-image: url(./sp_main.png);
-            background-size: 468px 456px;
-        }
-
-        .blind {
-            position: absolute;
-            clip: rect(0 0 0 0);
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            overflow: hidden;
-        }
-
-        #header-burger {
-            top: 5px;
-            left: -10px;
-        }
-
-        #header-burger>div {
-            background-position: -311px -151px;
-        }
-
-        #header-naverpay {
-            top: 5px;
-            left: 41px;
-        }
-
-        #header-naverpay>div {
-            background-position: 0px -318px;
-        }
-
-        #header-talk {
-            top: 5px;
-            right: 94px;
-        }
-
-        #header-talk>div {
-            background-position: -132px -318px;
-        }
-
-        #header-notice {
-            top: 5px;
-            right: 42px;
-        }
-
-        #header-notice>div {
-            background-position: -311px -217px;
-        }
-
-        #header-shopping {
-            top: 5px;
-            right: -10px;
-        }
-
-        #header-shopping>div {
-            background-position: -66px -318px;
-        }
-
-        #search {
-            position: relative;
-            z-index: 120;
-            height: 156px;
-            padding: 52px 0 8px;
-            /* background-color: orange; */
-            /* border: 2px solid blue; */
-
-        }
-
-        #search>form {
-            position: absolute;
-            top: 52px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 706px;
-            height: 61px;
-            border: 1px solid #03c75a;
-            border-radius: 33px;
-            background-color: #fff;
-            text-align: left;
-            display: inline-flex;
-
-        }
-
-        #search>form:hover {
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12);
-        }
-
-        #search-input {
-            width: 480px;
-            height: 58px;
-            line-height: 24px;
-            font-weight: 700;
-            font-size: 2rem;
-            color: #000;
-            letter-spacing: -0.4px;
-            font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
-            /* height: 100%; */
-            padding: 17px 0;
-            border: none;
-            margin: 0;
-            outline: none;
-            background: none;
-            position: relative;
-            top: -3px;
-        }
-
-        #search-input::placeholder {
-            color: white;
-        }
-
-        #search-input:hover::placeholder {
-            color: #e4e4e4;
-        }
-
-        #search>form a {
-            width: 67px;
-            height: 58px;
-            padding: 17px 16px 17px 27px;
-            display: inline-block;
-        }
-
-        #search>form svg {
-            width: 24px;
-            height: 24px;
-            fill: #03c75a;
-        }
-
-        #search-right {
-            display: inline-block;
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
-            align-items: stretch;
-        }
-
-        #search-keyboard::before,
-        #search-recent::before {
-            content: "";
-            display: block;
-            background-image: url(https://pm.pstatic.net/resources/asset/sp_main.6bbd194f.png);
-            background-size: 468px 456px;
-            background-repeat: no-repeat;
-            cursor: pointer;
-        }
-
-        #search-keyboard {
-            width: 30px;
-            height: 58px;
-            padding: 22px 3px;
-        }
-
-        #search-keyboard::before {
-            background-position: -273px -279px;
-            width: 24px;
-            height: 14px;
-        }
-
-        #search-recent {
-            width: 22px;
-            height: 58px;
-            padding: 26px 6px;
-        }
-
-        #search-recent::before {
-            background-position: -344px -45px;
-            width: 10px;
-            height: 6px;
-        }
-
-        #search-button {
-            width: 62px;
-            height: 58px;
-            padding: 17px 27px 16px 10px;
-        }
-
-        #search-button path {
-            width: 25px;
-            height: 25px;
-            /* padding: 17px 27px 16px 10px; */
-        }
-    </style>
 </head>
 
 <body>
@@ -369,133 +63,7 @@
                         </div>
                     </form>
                 </div>
-                <style>
-                    #nav {
-                        position: absolute;
-                        bottom: 20px;
-                        left: 50%;
-                        transform: translate(-50%);
-                    }
 
-                    #nav>ul {
-                        display: flex;
-                        justify-content: center;
-                    }
-
-                    #nav li {
-                        list-style: none;
-                        /* border: 1px solid blue; */
-                        width: 64px;
-                    }
-
-                    #nav li a {
-                        display: block;
-                        width: 64px;
-                        height: 68px;
-                        font-weight: 500;
-                        font-size: 1.4rem;
-                        color: rgb(16, 16, 16);
-                        text-decoration: none;
-                        line-height: 20px;
-                        /* background-color: white; */
-                    }
-
-                    #nav li a:hover {
-                        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12);
-                    }
-
-                    #nav li a div {
-                        width: 40px;
-                        height: 40px;
-                        /* display: inline-block; */
-                        /* border: 1px solid red; */
-                        margin: 0 auto;
-                        position: relative;
-                    }
-
-                    #nav li a .service-name {
-                        display: block;
-                        font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
-                        font-size: 14px;
-                        line-height: 20px;
-                        font-weight: 500;
-                        margin: 4px 0 0;
-                    }
-
-                    #nav li a div::before {
-                        content: "";
-                        display: inline-block;
-                        z-index: 10;
-                        /* top: -1px;
-                        left: -5px; */
-                        position: absolute;
-                        top: -2px;
-                        left: 50%;
-                        transform: translate(-50%);
-                        background-image: url(https://pm.pstatic.net/resources/asset/sp_main.6bbd194f.png);
-                        background-size: 468px 456px;
-                        background-position: -153px -142px;
-                        background-repeat: no-repeat;
-                        width: 50px;
-                        height: 50px;
-                    }
-
-                    #nav li a div::after {
-                        display: inline-block;
-                        content: '';
-                        background-image: url(https://pm.pstatic.net/resources/asset/sp_main.6bbd194f.png);
-                        background-size: 468px 456px;
-                        background-position: -205px -219px;
-                        background-repeat: no-repeat;
-                        width: 40px;
-                        height: 40px;
-                        position: absolute;
-                        top: 0px;
-                        left: 50%;
-                        transform: translate(-50%);
-                        z-index: 10;
-                    }
-
-                    #nav li:nth-of-type(1) a div::after {
-                        background-position: -205px -219px;
-                    }
-
-                    #nav li:nth-of-type(2) a div::after {
-                        background-position: -41px -219px;
-                    }
-
-                    #nav li:nth-of-type(3) a div::after {
-                        background-position: 0px -219px;
-                    }
-
-                    #nav li:nth-of-type(4) a div::after {
-                        background-position: -41px -260px;
-                    }
-
-                    #nav li:nth-of-type(5) a div::after {
-                        background-position: -270px -205px;
-                    }
-
-                    #nav li:nth-of-type(6) a div::after {
-                        background-position: -123px -260px;
-                    }
-
-                    #nav li:nth-of-type(7) a div::after {
-                        background-position: 0px -260px;
-                    }
-
-                    #nav li:nth-of-type(8) a div::after {
-                        background-position: -270px 0px;
-                    }
-
-                    #nav li:nth-of-type(9) a div::after {
-                        background-position: -164px -260px;
-                    }
-
-                    #nav li:nth-of-type(11) a div::after {
-                        background-position: -270px -164px;
-                    }
-                </style>
                 <nav id="nav">
                     <ul>
                         <li>
@@ -570,176 +138,779 @@
                     </ul>
                 </nav>
             </header>
-            <style>
-                #main {
-                    display: flex;
-                    /* margin-top: 62px; */
-                    /* background-color: #008f76; */
-                    height: 100%;
-                }
 
-                #main-left {
-                    width: 830px;
-                    margin-right: 30px;
-                }
-
-                #main-right {
-                    width: 420px;
-                }
-
-                #main-left-ad {
-                    height: 130px;
-                    padding-right: 20px;
-                }
-
-                #main-right-ad01 {
-                    height: 240px;
-                    padding: 18px 18px 0;
-                }
-
-                #main-right-ad02 {
-                    width: 420px;
-                    height: 80px;
-                    overflow: hidden;
-                }
-
-                #main-right-ad02 img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-
-                #main-right-ad03 {
-                    height: 172px;
-                    padding: 18px;
-                }
-
-                #main-newstand {
-                    margin-top: 16px;
-                    height: 426px;
-                }
-
-                #main-shopping {
-                    height: 560px;
-                }
-
-                #main-login {
-                    height: 164px;
-                    padding: 21px 20px 18px;
-                }
-
-                #main-login .login-txt {
-                    font-size: 1.4rem;
-                    line-height: 20px;
-                    font-weight: 500;
-                    text-align: center;
-                    height: 20px;
-                }
-
-                #main-login .login-button {
-                    color: #fff;
-                    background-color: #03c75a;
-                    text-align: center;
-                    display: block;
-                    width: 100%;
-                    height: 56px;
-                    margin: 13px 0 0;
-                    padding: 17px 0;
-                    font-size: 1.5rem;
-                    font-weight: 500;
-                    line-height: 20px;
-                    border: 1px solid rgba(0, 0, 0, .06);
-                    border-radius: 4px;
-                    text-decoration: none;
-                }
-
-                #main-login .login-button .login-logo {
-                    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.6bbd194f.png);
-                    background-size: 468px 456px;
-                    background-position: -130px -301px;
-                    background-repeat: no-repeat;
-                    width: 72px;
-                    height: 14px;
-                    display: inline-block;
-                    margin: 3px 8px 0 0;
-                    vertical-align: top;
-                }
-
-                #main-login .login-button:hover {
-                    background-color: #17b75e;
-                }
-
-                .box {
-                    box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, .04);
-                    border-radius: 8px;
-                    margin-bottom: 16px;
-                }
-
-                #main-weather {
-                    height: 236px;
-                    padding: 0 18px;
-                }
-
-                #main-stock {
-                    height: 236px;
-                    padding: 0 18px;
-                }
-
-                #main-weather>header,
-                #main-stock>header {
-                    height: 52px;
-                    padding: 6px 0;
-                    font-size: 16px;
-                    font-weight: 800;
-                    line-height: 40px;
-                    color: rgb(8, 8, 8);
-                }
-
-                #main-weather>div,
-                #main-stock>div {
-                    border: 1px solid var(--color_border_in);
-                }
-
-                #main-right-ad04 {
-                    height: 240px;
-                    padding: 18px 18px 0;
-                }
-
-                #main-right-widget {
-                    height: 516px;
-                }
-            </style>
             <main id="main">
                 <div id="main-left">
-                    <aside id="main-left-ad" class="box"></aside>
-                    <section id="main-newstand" class="box"></section>
-                    <section id="main-shopping" class="box"></section>
+                    <aside id="main-left-ad" class="box">
+                        <img src="https://ssl.pstatic.net/melona/libs/1541/1541196/98f0b143a3a83c9eadba_20250916132939066.jpg"
+                            width="830" height="130"
+                            alt="[광고]넷마블 신규 월드 카프 9월 18일 오후 6시 오픈 모두가 향하는 전장으로 지금 합류하라 뱀피르 지금 다운로드하세요">
+                    </aside>
+                    <section id="main-newstand" class="box">
+                        <div class="title-area">
+                            <ul>
+                                <li><span><a href="#">뉴스스탠드</a><a href="#">언론사편집</a></span></li>
+                                <li><a href="#"> 엔터</a></li>
+                                <li><a href="#"> 스포츠</a><span class="live_icon">LIVE</span></li>
+                                <li><a href="#"> 경제</a></li>
+                                <li><a href="#" class="focus"> 쇼핑투데이</a></li>
+                            </ul>
+                        </div>
+                        <div class="content-header">
+                            <span>신상 위크</span><a href="#" class="tit">휠라 언더웨어 에센셜 클래식 라인 단독 론칭! 지금 혜택가로 구매
+                                요즘 관심받는 잇템</a><a href="#" class="right-text">마이쇼핑</a>
+                        </div>
+                        <div class="view-container">
+                            <ul class="view-list">
+                                <li class="view-module">
+                                    <a href="#">
+                                        <span class="view-img"><img
+                                                src="https://s.pstatic.net/shopping.phinf/20250911_18/865a451c-3645-446c-b0d7-de559096bbc3.jpg"
+                                                width="156" height="104"></span>
+                                        <div class="view-info">
+                                            <div class="view-module-top">로맨스 배색 타이 니트</br>원단좋은옷! 브랜드그이상</div>
+                                            <div class="view-module-center">36,000원</div>
+                                            <div class="view-module-bottom">안나앤모드</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="view-module">
+                                    <a href="#">
+                                        <span class="view-img"><img
+                                                src="https://s.pstatic.net/shopping.phinf/20250915_26/7d821918-fa84-4efc-9c8d-c616b162dbfa.jpg"
+                                                width="156" height="104"></span>
+                                        <div class="view-info">
+                                            <div class="view-module-top">가을 무드 가득 담은</br>자체제작 프릴 블라우스</div>
+                                            <div class="view-module-center">83,000원</div>
+                                            <div class="view-module-bottom">프로스트제이</div>
+                                        </div>
+                                </li>
+                                </a>
+                            </ul>
+                            <ul class="view-list">
+                                <li class="view-module">
+                                    <a href="#">
+                                        <span class="view-img"><img
+                                                src="https://s.pstatic.net/shopping.phinf/20250811_25/bc37ab36-2f33-4427-9dbf-faa50b18b6f1.jpg"
+                                                width="156" height="104"></span>
+                                        <div class="view-info">
+                                            <div class="view-module-top">이거 사용한 이후로</br>눈썹칼 다 버렸어요!</div>
+                                            <div class="view-module-center"><span
+                                                    class="sale-rate">53%</span>32,000원<span class="cost">60,300원</span>
+                                            </div>
+                                            <div class="view-module-bottom">뷰엔디</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="view-module">
+                                    <a href="#">
+                                        <span class="view-img"><img
+                                                src="https://s.pstatic.net/shopping.phinf/20250522_0/f681a44c-5ad7-414d-bf63-3ac14b336b96.jpg"
+                                                width="156" height="104"></span>
+                                        <div class="view-info">
+                                            <div class="view-module-top">14K 펜던트가 39,000원</br>고래꼬리 특가진행</div>
+                                            <div class="view-module-center"><span
+                                                    class="sale-rate">67%</span>39,000원<span class="cost">12,100원</span>
+                                            </div>
+                                            <div class="view-module-bottom">골드몬</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content-footer">
+                            <button type="button" class="content-pagging-Btn prev"></button>
+                            <p class="content-footer-txt">
+                                <span>쇼핑투데이</span>
+                                <span>더보기</span>
+                                <span class="current-page">14</span>
+                                <span class="entire-page">/15</span>
+                            </p>
+                            <button type="button" class="content-pagging-Btn next"></button>
+                            <span class="ad_btn">AD</span>
+                        </div>
+                    </section>
+                    <section id="main-shopping" class="box">
+                        <div class="title-area">
+                            <ul>
+                                <li><a href="#" class="focus">쇼핑</a></li>
+                                <li><a href="#">맨즈</a></li>
+                                <li><a href="#">추천핫딜</a></li>
+                                <li><a href="#"> 쇼핑라이프</a></li>
+                            </ul>
+                            <div class="paging-area">
+                                <span class="current-page">14</span>
+                                <span class="entire-page">/15</span>
+                                <button type="button" class="pagination-btn-prev"></button>
+                                <button type="button" class="pagination-btn-after"></button>
+                            </div>
+                        </div>
+                        <div class="commerce-container">
+                            <div class="commerce-left-area">
+                                <div class="shopping-site-group commerce-box">
+                                    <p class="shopping-site-list"><a class="focus" href="#"><strong>쿠팡</strong></a><span
+                                            class="list-dot"></span><a href="#">G마켓</a><span class="list-dot"></span><a
+                                            href="#">옥션</a><span class="list-dot"></span><a href="#">올리브영</a></p>
+                                    <p class="shopping-site-list"><a href="#">11번가</a><span class="list-dot"></span><a
+                                            href="#">SSG닷컴</a><span class="list-dot"></span><a href="#"><strong>GS
+                                                SHOP</strong></a><span class="list-dot"></span><a href="#">하프클럽</a></p>
+                                    <p class="shopping-site-list"><a href="#"><strong>CJ온스타일</strong></a><span
+                                            class="list-dot"></span><a href="#">패션플러스</a><span
+                                            class="list-dot"></span><a href="#">이마트몰</a></p>
+                                </div>
+                                <ul class="commerce-box shortcut-btn">
+                                    <li><a href="#">
+                                            <div class="shortcut-btn-img my-shopping"></div>
+                                            <div class="shortcut-btn-txt">마이쇼핑</div>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <div class="shortcut-btn-img review"></div>
+                                            <div class="shortcut-btn-txt">리뷰적립</div>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <div class="shortcut-btn-img my-ordder"></div>
+                                            <div class="shortcut-btn-txt">주문</div>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <div class="shortcut-btn-img my-cart"></div>
+                                            <div class="shortcut-btn-txt">장바구니</div>
+                                        </a></li>
+                                </ul>
+                                <div class="left-ad-area">
+                                    <a href="#">
+                                        <span class="ad_img">
+                                            <img src="img/c422dd42-59f6-4925-b601-d8deba1d8171.jpg" width="248"
+                                                height="146" alt="ad">
+                                        </span>
+                                        <p>15분 사용으로 달라지는 다리 라인</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="commerce-right-area">
+                                <ul class="shopping-list">
+                                    <li><a href="#">
+                                            <span>
+                                                <img src="img/c8fd298f-91c8-4756-92e7-b50c1fcb0fa1.jpg" alt="ad-img">
+                                            </span>
+                                            <p>독보적인 예쁨!</br>41% 인생 자켓</p>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <span>
+                                                <img src="img/ed0a434a-e134-46ed-a2a3-55dafd1510c4.jpg" alt="ad-img">
+                                            </span>
+                                            <p>가을 신상 BEST</br>반응폭발 가디건</p>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <span>
+                                                <img src="img/b376ff4b-3e63-4044-84a6-5a3524fbc16a.jpg" alt="ad-img">
+                                            </span>
+                                            <p>이거 쓰고 나서!</br>뷰티기기 안써요</p>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <span>
+                                                <img src="img/e4b5d042-ea8a-4635-be96-cd35cb37fd04.jpg" alt="ad-img">
+                                            </span>
+                                            <p>천국의 계단?</br>집에서 소리없이</p>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <span>
+                                                <img src="img/c2632182-aebd-435f-863c-2ac34fdebf3e.jpg" alt="ad-img">
+                                            </span>
+                                            <p>고밀도 워싱으로</br>느낌 좋은 이불~</p>
+                                        </a></li>
+                                </ul>
+                                <ul class="shopping-list">
+                                    <li><a href="#">
+                                            <span>
+                                                <img src="img/c6ab225c-c053-4ce9-a391-6b18404d1a92.jpg" alt="ad-img">
+                                            </span>
+                                            <p>역대급 촉촉함~</br>카스테라선물set</p>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <span>
+                                                <img src="img/2ebe3d3f-576a-4fa5-96b1-85cfade46895.jpg" alt="ad-img">
+                                            </span>
+                                            <p>집들이 선물용</br>이만한게 없어요</p>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <span>
+                                                <img src="img/4d8f8e67-aaf0-4c63-9da3-e2ab152d44b4.jpg" alt="ad-img">
+                                            </span>
+                                            <p>가을 메리제인</br>매력적인스타일</p>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <span>
+                                                <img src="img/f32be561-5efd-4024-95dd-5278ad85934c.jpg" alt="ad-img">
+                                            </span>
+                                            <p>밥먹기 귀찮아?</br>사무실에쟁여놔</p>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <span>
+                                                <img src="img/608a7e78-5570-4625-9c98-a0330a0465a3.jpg" alt="ad-img">
+                                            </span>
+                                            <p>단3일만 SALE</br>가을원피스10%</p>
+                                        </a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="content-header">
+                            <span><strong>오늘의 혜택</strong></span>
+                            <a href="#">
+                                <img height="13" src="img/0e20d198-b64e-450e-ae90-bdc4603e2188.png" alt="G마켓">
+                                <span><span class="point-txt">지마켓 한가위빅세일 진행중! </span> 다가오는 한가위 선물 특가로 GET!</span>
+                            </a>
+                        </div>
+                        <div class="content-footer">
+                            <button type="button" class="content-pagging-Btn prev"></button>
+                            <p class="content-footer-txt">
+                                <span>쇼핑아이템</span>
+                                <span>더보기</span>
+                                <span class="current-page">14</span>
+                                <span class="entire-page">/15</span>
+                            </p>
+                            <button type="button" class="content-pagging-Btn next"></button>
+                            <span class="ad_btn">AD</span>
+                        </div>
+                    </section>
+                    <section id="main-contents" class="box">
+                        <div class="title-area">
+                            <ul>
+                                <li><a href="#">추천</a></li>
+                                <li><a href="#">카테크</a></li>
+                                <li><a href="#">웹툰</a></li>
+                                <li><a href="#">패션뷰티</a></li>
+                                <li><a href="#">리빙푸드</a></li>
+                                <li><a href="#" class="focus">책방</a></li>
+                                <li><a href="#">지식</a></li>
+                                <li><a href="#">건강</a></li>
+                                <li><a href="#">게임</a></li>
+                            </ul>
+                        </div>
+                        <div class="feed-box">
+                            <ul>
+                                <li><a href="#">
+                                        <p class="adImg"><img src="img/upload_1757475933161IQ3Uf.jpg" alt="ad-img"></p>
+                                        <p class="highlight-tit">도서 특가 모음전</p>
+                                        <p class="ad-tit">초특가 핫딜북</br>한정 수량, 지금만 이 가격!</p>
+                                        <p class="sub-tit">인플루언서 추천 도서를 특가로 만나보기!</p>
+                                    </a></li>
+                                <li><a href="#">
+                                        <p class="adImg"><img src="img/upload_1757920003195PFqHi.png" alt="ad-img"></p>
+                                        <p class="highlight-tit">네이버 특선물</p>
+                                        <p class="ad-tit">유아 도서부터 성인 매거진까지</br>최대 85% 할인</p>
+                                        <p class="sub-tit">지금 만나보세요</p>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <div class="feed-box">
+                            <div class="feed-tit">분야별 신간 도서</div>
+                            <ul class="feed-sixColumn-list">
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드.jfif" alt="feed-img"></p>
+                                        <p class="feed-tit_">생존을 위한 최소한의 지리</p>
+                                        <p class="feed-sub-tit"><span>최준영</span><span>교보문고</span></p>
+                                    </a></li>
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드 (1).jfif" alt="feed-img"></p>
+                                        <p class="feed-tit_">민주당을 떠나며</p>
+                                        <p class="feed-sub-tit"><span>털시 개버드</span><span>메디치미디어</span></p>
+                                    </a></li>
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드 (2).jfif" alt="feed-img"></p>
+                                        <p class="feed-tit_">2025 시대에듀 한국실용글쓰기 실제 기출로 끝내기</p>
+                                        <p class="feed-sub-tit"><span>이원근, 김슬옹</span><span>시대고시기획</span></p>
+                                    </a></li>
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드.png" alt="feed-img"></p>
+                                        <p class="feed-tit_">빨모쌤의 라이브 영어회화(10만 부 기념 리커버 특별판)</p>
+                                        <p class="feed-sub-tit"><span>신용하</span><span>웅진지식하우스</span></p>
+                                    </a></li>
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드 (3).jfif" alt="feed-img"></p>
+                                        <p class="feed-tit_">어른의 관계를 가꾸는 100일 필사 노트</p>
+                                        <p class="feed-sub-tit"><span>김종원</span><span>청림Life</span></p>
+                                    </a></li>
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드 (4).jfif" alt="feed-img"></p>
+                                        <p class="feed-tit_">트렌드 코리아 2026</p>
+                                        <p class="feed-sub-tit"><span>김난도, 전미영, 최지혜, 권정윤, 한다혜, 이혜원, 이수진, 서유현, 이준영, 이향은,
+                                                김나은, 전다현</span><span>미래의창</span></p>
+                                    </a></li>
+                            </ul>
+                            <ul class="feed-sixColumn-list">
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드 (5).jfif" alt="feed-img"></p>
+                                        <p class="feed-tit_">캐리커처</p>
+                                        <p class="feed-sub-tit"><span>단요</span><span>창비</span></p>
+                                    </a></li>
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드 (6).jfif" alt="feed-img"></p>
+                                        <p class="feed-tit_">2026 해커스경찰 갓대환 형사법 기출총정리 세트 (경찰공무원) - 전3권</p>
+                                        <p class="feed-sub-tit"><span>김대환</span><span>해커스경찰</span></p>
+                                    </a></li>
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드 (7).jfif" alt="feed-img"></p>
+                                        <p class="feed-tit_">오투 중학 과학 1-1(2026)</p>
+                                        <p class="feed-sub-tit"><span>비상교육 편집부</span><span>비상교육</span></p>
+                                    </a></li>
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드 (8).jfif" alt="feed-img"></p>
+                                        <p class="feed-tit_">머리 좋은 아이는 이렇게 키웁니다</p>
+                                        <p class="feed-sub-tit"><span>에일린 케네디 무어, 마크 S. 뢰벤탈</span><span>레디투다이브</span>
+                                        </p>
+                                    </a></li>
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드 (9).jfif" alt="feed-img"></p>
+                                        <p class="feed-tit_">6~13세 기본 아동식</p>
+                                        <p class="feed-sub-tit"><span>이지연</span><span>레시피팩토리</span></p>
+                                    </a></li>
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드 (10).jfif" alt="feed-img"></p>
+                                        <p class="feed-tit_">질문의 숲</p>
+                                        <p class="feed-sub-tit"><span>김종원</span><span>포레스트북스</span></p>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <div class="feed-box">
+                            <div class="feed-tit">베스트셀러 TOP20</div>
+                            <ul class="feed-sixColumn-list">
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드 (11).jfif" alt="feed-img"></p>
+                                        <p class="feed-tit_">혼모노</p>
+                                        <p class="feed-sub-tit"><span>성해나</span><span>창비</span></p>
+                                    </a></li>
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드 (12).jfif" alt="feed-img"></p>
+                                        <p class="feed-tit_">월요일 수요일 토요일</p>
+                                        <p class="feed-sub-tit"><span>페트라 펠리니</span><span>북파머스</span></p>
+                                    </a></li>
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드 (13).jfif" alt="feed-img"></p>
+                                        <p class="feed-tit_">모순</p>
+                                        <p class="feed-sub-tit"><span>양귀자</span><span>쓰다</span></p>
+                                    </a></li>
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드 (14).jfif" alt="feed-img"></p>
+                                        <p class="feed-tit_">트렌드 코리아 2026</p>
+                                        <p class="feed-sub-tit"><span>김난도, 전미영, 최지혜, 권정윤, 한다혜, 이혜원, 이수진, 서유현, 이준영, 이향은,
+                                                김나은, 전다현</span><span>미래의창</span></p>
+                                    </a></li>
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드 (15).jfif" alt="feed-img"></p>
+                                        <p class="feed-tit_">위버멘쉬</p>
+                                        <p class="feed-sub-tit"><span>프리드리히 니체</span><span>떠오름(RISE)</span></p>
+                                    </a></li>
+                                <li><a href="#">
+                                        <p class="feed-img"><img src="img/다운로드 (16).jfif" alt="feed-img"></p>
+                                        <p class="feed-tit_">어른의 행복은 조용하다</p>
+                                        <p class="feed-sub-tit"><span>태수</span><span>페이지2북스</span></p>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <div class="content-footer">
+                            <p class="content-footer-txt"><span>펼쳐보기</span><i class="plus-icon"></i></p>
+                        </div>
+                    </section>
                 </div>
                 <div id="main-right">
                     <section id="main-login" class="box">
                         <p class="login-txt">네이버를 더 안전하고 편리하게 이용하세요</p>
                         <a href="#" class="login-button"><i class="login-logo"></i>로그인</button></a>
+                        <p class="login-find"><a href="#">아이디 찾기</a><a href="#">비밀번호 찾기</a><a href="#">회원가입</a></p>
                     </section>
-                    <aside id="main-right-ad01" class="box">01</aside>
+                    <aside id="main-right-ad01" class="box">
+                        <img src="https://ssl.pstatic.net/melona/libs/1546/1546359/c37c908536bf32c72f88_20250918093605050.png"
+                            width="420" height="240" alt="">
+                    </aside>
                     <aside id="main-right-ad02" class="box">
                         <img src="https://s.pstatic.net/static/www/mobile/edit/20250805_1095/upload_1754369573904JZpiG.png"
                             alt="네이버 광고">
                     </aside>
-                    <aside id="main-right-ad03" class="box">03</aside>
+                    <aside id="main-right-ad03" class="box">
+                        <div class="ad-header">
+                            <p>많이</br>찾는 쇼핑</br>아이템은?</p>
+                            <a href="#" class="ad_btn">AD</a>
+                        </div>
+                        <ul class="ad-items-container">
+                            <li><a href="#">
+                                    <span class="img"><img src="img/다운로드 (17).jfif" alt="ad-img"></span>
+                                    <p class="title">캠핑 침낭 겨울 동계 이불 사계절 경량 싱글</p>
+                                </a></li>
+                            <li><a href="#">
+                                    <span class="img"><img src="img/다운로드 (1).png" alt="ad-img"></span>
+                                    <p class="title">크레모아 메달 LED 감성 캠핑랜턴 무드등 조명</p>
+                                </a></li>
+                            <li><a href="#">
+                                    <span class="img"><img src="img/다운로드 (2).png" alt="ad-img"></span>
+                                    <p class="title">전기스쿠터 25년 신형 이누리 V1 배달용 장거리 전동 스쿠터</p>
+                                </a></li>
+                        </ul>
+                    </aside>
                     <section id="main-weather" class="box">
-                        <header>날씨</header>
-                        <div></div>
+                        <header>날씨 <a href="#" class="daily-board-shortcut">예보 비교</a></header>
+                        <div class="info-group">
+                            <div class="info-left-box">
+                                <a href="#">
+                                    <div class="weather-info">
+                                        <div class="img"></div>
+                                        <div class="txt">
+                                            25.7°
+                                            <small>맑음</small>
+                                        </div>
+                                    </div>
+                                    <a class="temperature-info">
+                                        <span class="min">20°</span>
+                                        <span class="max">28°</span>
+                                    </a>
+                                </a>
+                                <a href="#" class="dust-info">
+                                    <span class="dust-txt">
+                                        미세
+                                        <span class="dust-state">보통</span>
+                                    </span>
+                                    <span class="dust-txt">
+                                        초미세
+                                        <span class="dust-state">보통</span>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="info-right-box">
+                                <a href="#">
+                                    <div class="weather-graph">
+                                        <canvas width="180" height="37"
+                                            style="min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%;"></canvas>
+                                    </div>
+                                    <ul class="weather-list">
+                                        <li>
+                                            <p class="current">23시</p>
+                                            <p class="icon"></p>
+                                            <p class="top-area">20°</p>
+                                        </li>
+                                        <li>
+                                            <p class="current">1</p>
+                                            <p class="icon"></p>
+                                            <p class="top-area">20°</p>
+                                        </li>
+                                        <li>
+                                            <p class="current">3</p>
+                                            <p class="icon"></p>
+                                            <p class="top-area">19°</p>
+                                        </li>
+                                        <li>
+                                            <p class="current">5</p>
+                                            <p class="icon"></p>
+                                            <p class="top-area">18°</p>
+                                        </li>
+                                        <li>
+                                            <p class="current">7</p>
+                                            <p class="icon"></p>
+                                            <p class="top-area">17°</p>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </div>
                     </section>
                     <section id="main-stock" class="box">
-                        <header>증권</header>
-                        <div></div>
+                        <header>증시<span class="info_btn"></span><span class="current">09.26. 16:32<button type="button"
+                                    class="refresh-btn"></button></span></header>
+                        <div class="info-group">
+                            <div class="info-left-box">
+                                <div class="stock-info">
+                                    <p class="stock-name">
+                                        환율 USD
+                                    </p>
+                                    <p class="stock-price">
+                                        1,412.10
+                                    </p>
+                                    <p class="stock-gap">
+                                        <i class="down-arrow-ico"></i><span>3.10 -0.22%</span>
+                                    </p>
+                                </div>
+                                <img class="stock-graph"
+                                    src="https://ssl.pstatic.net/imgfinance/chart/mobile/marketindex/month3/FX_USDKRW_naverpc_l.png"
+                                    width="180" height="44" alt="">
+                                <p class="stock-period-info">3개월 차트</p>
+                            </div>
+                            <div class="info-right-box">
+                                <ul class="stock-list">
+                                    <li><a href="#">
+                                            <p class="stock-name">삼성전자</p>
+                                            <p class="stock-detail-info">
+                                                <span class="stock-gap"><i class="down-arrow-ico"></i>3.25%</span>
+                                                <span class="stock-price">83,300</span>
+                                            </p>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <p class="stock-name">NAVER</p>
+                                            <p class="stock-detail-info">
+                                                <span class="stock-gap" style="color:#f43612"><i
+                                                        class="up-arrow-ico"></i>0.98%</span>
+                                                <span class="stock-price">256,500</span>
+                                            </p>
+                                        </a></li>
+                                    <li><a href="#">
+                                            <p class="stock-name">SK하이닉스</p>
+                                            <p class="stock-detail-info">
+                                                <span class="stock-gap"><i class="down-arrow-ico"></i>5.61%</span>
+                                                <span class="stock-price">336,500</span>
+                                            </p>
+                                        </a></li>
+                                    <li><a class="more-shortcut" href="#">
+                                            <p>인기종목 더보기</p>
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </section>
-                    <aside id="main-right-ad04" class="box"></aside>
-                    <section id="main-right-widget" class="box"></section>
+                    <aside id="main-right-ad04" class="box">
+                        <a href="#">
+                            <header>바닥에서도 등배김 없는 포근한 토퍼</header>
+                            <div class="ad-info-inner">
+                                <img src="img/250903_뉴토퍼1_17568856550449179676257543782549.jpg" alt="ad-img">
+                                <p>살 거면 지금이 기회! 허리편한 토퍼 1+1 특가</p>
+                            </div>
+                            <div class="bottom">
+                                <p class="brand-info">
+                                    <span class="img"><img
+                                            src="img/네이버광고이미지_0813-300_17550727730383717741288808852128.png"
+                                            alt="brand-img"></span>
+                                    필링쏘굿
+                                </p>
+                                <p class="more-shortcut">더 알아보기</p>
+                            </div>
+                        </a>
+                    </aside>
+                    <section id="main-right-widget" class="box">
+                        <header>위젯 보드</header>
+                        <div class="widgets-wrap">
+                            <div class="widget">
+                                <div class="widget-group">
+                                    <div class="calendar">
+                                        <div class="tit">캘린더</div>
+                                        <div class="wrap">
+                                            <div class="left-area">
+                                                <div class="date">
+                                                    9.27 <small>토</small>
+                                                </div>
+                                                <p><a href="#" class="login-link">로그인하기</a></p>
+                                            </div>
+                                            <div class="right-area">
+                                                <a href="#" class="calender-table-wrap">
+                                                    <table>
+                                                        <thead>
+                                                            <th class="sunday">일</th>
+                                                            <th>월</th>
+                                                            <th>화</th>
+                                                            <th>수</th>
+                                                            <th>목</th>
+                                                            <th>금</th>
+                                                            <th>토</th>
+                                                        </thead>
+                                                        <tr>
+                                                            <td class="sunday other-month">31</td>
+                                                            <td>1</td>
+                                                            <td>2</td>
+                                                            <td>3</td>
+                                                            <td>4</td>
+                                                            <td>5</td>
+                                                            <td>6</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="sunday">7</td>
+                                                            <td>8</td>
+                                                            <td>9</td>
+                                                            <td>10</td>
+                                                            <td>11</td>
+                                                            <td>12</td>
+                                                            <td>13</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="sunday">14</td>
+                                                            <td>15</td>
+                                                            <td>16</td>
+                                                            <td>17</td>
+                                                            <td>18</td>
+                                                            <td>19</td>
+                                                            <td>20</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="sunday">21</td>
+                                                            <td>22</td>
+                                                            <td>23</td>
+                                                            <td>24</td>
+                                                            <td>25</td>
+                                                            <td>26</td>
+                                                            <td class="current-day">27</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="sunday">28</td>
+                                                            <td>29</td>
+                                                            <td>30</td>
+                                                            <td class="other-month">1</td>
+                                                            <td class="other-month">2</td>
+                                                            <td class="other-month">3</td>
+                                                            <td class="other-month">4</td>
+                                                        </tr>
+                                                    </table>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shorts">
+                                        <div class="tit"><i class="vibe-icon"></i>마음치유 싱잉볼<button type="button"
+                                                class="refresh-btn">다른 추천 보기</button></div>
+                                        <ul class="vibe-list">
+                                            <li><a href="#">
+                                                    <span class="img">
+                                                        <img src="img/다운로드 (3).png" alt="short-img-01" width="108"
+                                                            height="126">
+                                                    </span>
+                                                    <span class="txt">
+                                                        뱃 속 아가와 함께 듣는 싱잉볼
+                                                    </span>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <span class="img">
+                                                        <img src="img/다운로드 (4).png" alt="short-img-01" width="108"
+                                                            height="126">
+                                                    </span>
+                                                    <span class="txt">
+                                                        싱잉볼 릴렉스 힐링 테라피
+                                                    </span>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <span class="img">
+                                                        <img src="img/다운로드 (5).png" alt="short-img-01" width="108"
+                                                            height="126">
+                                                    </span>
+                                                    <span class="txt">
+                                                        의식 있는 하루를 열고 싶을 때
+                                                    </span>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="app-download-link"><b>모바일 네이버 메인</b> 열기</a>
+                    </section>
+                    <aside id="main-right-ad05" class="box">
+                        <a href="#">
+                            <img src="img/upload_1758773276437rduYQ.jpg" alt="main-ad-img">
+                            <div class="txt">
+                                <strong>네이버 새로운 기록 공간 오픈!</strong>
+                                <span>10초 만에 클립 프로필 만들기!</span>
+                            </div>
+                        </a>
+                    </aside>
 
                 </div>
             </main>
         </div>
+        <footer>
+            <div class="footer-inner">
+                <div class="footer-banner">
+                    <ul>
+                        <li><a href="#">
+                                <div class="img">
+                                    <img src="img/6ffed3bb0f7cc72b7fab_20250905093829347.jpg"
+                                        alt="foonter-banner-img01">
+                                </div>
+                                <div class="txt">
+                                    <strong class="name">초록우산</strong>
+                                    <strong class="tit">사랑을 기다리는 쌍둥이 돕기</strong>
+                                    <p class="desc">악취가 새어 나오는</br>쓰레기장 같은 집에서 발견됐어요</p>
+                                </div>
+                            </a></li>
+                        <li><a href="#">
+                                <div class="img">
+                                    <img src="img/9edda9608f6c4d14d27a_20250912170746698.png"
+                                        alt="foonter-banner-img01">
+                                </div>
+                                <div class="txt">
+                                    <strong class="name">네이버</strong>
+                                    <strong class="tit">네이버에 새집마련</strong>
+                                    <p class="desc">새로운 기록 공간</br>100만호 선착순 분양중</p>
+                                </div>
+                            </a></li>
+                        <li><a href="#">
+                                <div class="img">
+                                    <img src="img/14b262a2692cae059ade_20250926132140114.png"
+                                        alt="foonter-banner-img01">
+                                </div>
+                                <div class="txt">
+                                    <strong class="name">네이버</strong>
+                                    <strong class="tit">개인정보 보호 캠패인</strong>
+                                    <p class="desc">다양한 행사 소식 알아보고,</br>소중한 개인정보 함께 지켜요!</p>
+                                </div>
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="notice-area">
+                    <a href="#">공지사항</a>
+                    <a href="#" class="shortcut">서비스 전체보기</a>
+                </div>
+                <div class="sitemap-box">
+                    <div class="partner-box-wrap">
+                        <div class="partner-box">
+                            <h3>Partners</h3>
+                            <a href="#">프로젝트 꽃</a>
+                            <a href="#">네이버 비즈니스</a>
+                            <a href="#">네이버 비즈니스 스쿨</a>
+                            <a href="#">네이버 광고</a>
+                            <a href="#">스토어 개설</a>
+                            <a href="#">지역업체 등록</a>
+                            <a href="#">엑스퍼트 등록</a>
+                        </div>
+                        <div class="partner-box">
+                            <h3>Developers</h3>
+                            <a href="#">네이버 개발자 센터</a>
+                            <a href="#">오픈 API</a>
+                            <a href="#">오픈소스</a>
+                            <a href="#">네이버 D2</a>
+                            <a href="#">네이버 D2SF</a>
+                            <a href="#">네이버 랩스</a>
+                        </div>
+                    </div>
+                    <div class="sitemap-box-wrap">
+                        <div class="whale-box">
+                            <a href="#">
+                                <div class="txt">
+                                    <strong>웨일 브라우저</strong>
+                                    <span>이용안내</span>
+                                </div>
+                                <img src="img/다운로드 (6).png" alt="whale-logo">
+                            </a>
+                        </div>
+                        <div class="enterprise-introduce-box">
+                            <a href="#">
+                                <div class="txt">
+                                    <strong>기업 사이트</strong>
+                                    <span>바로가기</span>
+                                </div>
+                                <img src="img/다운로드 (7).png" alt="naver-logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="policy-box">
+                    <ul class="policy-list">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">인재채용</a></li>
+                        <li><a href="#">제휴제안</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#" class="focus">개인정보처리방침</a></li>
+                        <li><a href="#">청소년보호정책</a></li>
+                        <li><a href="#">네이버 정책</a></li>
+                        <li><a href="#">고객센터</a></li>
+                    </ul>
+                    <a href="#" class="about-link">ⓒ NAVER Corp.</a>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 

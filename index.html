@@ -5,13 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Visual Archive</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="testStyle.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Jersey+10&family=Noto+Sans+KR:wght@100..900&display=swap"
         rel="stylesheet">
-        <script src="pofol.js"></script>
+   
 </head>
 
 <body>
@@ -33,122 +35,147 @@
             </div>
         </header>
         <main id="main">
-        <!-- 메인 비주얼 -->
-        <section class="main-visual">
-            <video src="bg.mp4" autoplay muted loop></video>
-            <div id="main-inner">
-                <div id="main-img-wrap">
-                    <img src="" alt="">
+            <!-- 메인 비주얼 -->
+            <section class="main-visual">
+                <div id="main-inner">
+                    <div id="main-img-wrap">
+                        <img src="" alt="">
+                    </div>
+                    <div id="main-text-wrap">
+                        <p><span class="seconFont"><span style="color:var(--main-color)">D</span>IG</span> /*DEEP*/</p>
+                        <p><span class="seconFont"><span style="color:var(--main-color)">E</span>XPLORE</span>/*FREELY*/
+                        </p>
+                        <P>/*LIKE MOLE<img src="/text_deco.png" width="80px" height="80px" alt="">*/</P>
+                        <h2>I'LL MAKE <span class="seconFont" style="color:var(--main-color)">DELIVER</span> WEB</h2>
+                    </div>
+                    <div class="progress-container">
+                        <progress class="progress" id="progress" min="0" max="100">헐랭</progress>
+                        <img src="./profile_img.png" alt="" class="runner">
+                    </div>
                 </div>
-                <div id="main-text-wrap">
-                    <h2>welcome my space!</h2>
-                    <p></p>
-                </div>
-            </div>
-        </section>
-         </main>
+            </section>
+        </main>
         <!-- About -->
         <!-- 피그마에서 제작한 소개시안 가로 스크롤로 넣기, swipe사용해서 -->
         <section id="about" class="section-wrap">
             <div class="section-inner showUp">
                 <h2>About</h2>
-                <div class="flex">
-                    <p class="img">
+                <div class="">
+                    <!-- <p class="img">
                         <img src="./profile_img.png" alt="프로필이미지">
-                    </p>
+                    </p> -->
+                    <!-- <p class="tit">전달력 있는 웹을 제작하는 퍼블리셔</p> -->
+                    <p class="tit">전달력이 좋은 웹을 제작하는 퍼블리셔</p>
+                    <div class="keyword-box-wrap">
+                        <div class="keyword-box" data-aos="flip-left">
+                            <p>이질감</p>
+                            <!-- <p>호기심</p> -->
+                        </div>
+                        <div class="keyword-box" data-aos="flip-left">
+                            <p>익숙함</p>
+                            <!-- <p>공감</p> -->
+                        </div>
+                        <div class="keyword-box" data-aos="flip-left">
+                            <p>인터렉션</p>
+                        </div>
+                    </div>
                     <p class="txt">
-                        <span>" 전달되는 웹을 제작하는 웹 퍼블리셔 "</span>
-                        디지털 시대에서 웹은 필수적인 커뮤니케이션 매체가 되었습니다</br>
-                        웹퍼블리셔라는 직업을 통해<br>
-                        많은 사람들이 원하는 정보를 잘 전달할 수 있도록 
-                        웹을 구현하는 일에 매력을 느꼈습니다.<br>
-                        특히 소외된 사용자들도 차별 없이 웹을 이용할 수 있도록, </br>
-                        웹접근성과 사용자 경험을 고려한 마크업을 중시하며,</br>
+                        <!-- 소통과 정보 교환이 가장 활발하게 일어나는 공간이 웹이니까 그곳에서 영향력을 뽐내고 싶어요. -->
+                        디지털 시대의 필수 매체인 웹을 통해 많은 사람들에게 정보를 잘 전달할 수 있도록
+                         구현하는 일에 매력을 느꼈습니다.
+                        특히 소외된 사용자들도 차별 없이 웹을 이용할 수 있도록,
+                        웹접근성과 사용자 경험을 고려한 마크업을 중시하며,
                         단순히 보이는 웹이 아닌 ‘전달되는 웹’을 만드는 것을 목표로 하고 있습니다.
                     </p>
+                    <!-- <div class="progress-container">
+                    <progress class="progress" id="progress" min="0" max="100">헐랭</progress>
+                    <img src="./profile_img.png" alt="" class="runner">
+                    </div> -->
+                    <a href="#about" class="scroll-down-btn">
+                        <div class="chevron"></div>
+                        <span class="text">Scroll down</span>
+                    </a>
                 </div>
             </div>
         </section>
 
         <section id="skill" class="section-wrap">
-            <div class="section-inner showUp">
+            <div class="section-inner">
                 <!-- Skill -->
-            <div id="skills">
-                    <h2>Skills</h2>
+                <div id="skills">
+                    <h2 data-aos="flip-down">Skills</h2>
                     <ul class="skills-grid">
-                        <li class="skill-item">
+                        <li class="skill-item"  data-aos="fade-up-right" data-aos-duration="300">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
                                 alt="HTML" />
                             <span>HTML5</span>
                         </li>
-                        <li class="skill-item">
+                        <li class="skill-item" data-aos="fade-up-right" data-aos-duration="600">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
                                 alt="CSS" />
                             <span>CSS3</span>
                         </li>
-                        <li class="skill-item">
+                        <li class="skill-item" data-aos="fade-up-right" data-aos-duration="900">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                                 alt="JS" />
                             <span>JavaScript</span>
                         </li>
-                        <li class="skill-item">
+                        <li class="skill-item" data-aos="fade-up-right" data-aos-duration="1200">
                             <img
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" />
                             <span>react</span>
                         </li>
-                        <li class="skill-item">
+                        <li class="skill-item" data-aos="fade-up-right" data-aos-duration="1500">
                             <img
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" />
                             <span>Photoshop</span>
                         </li>
-                        <li class="skill-item">
+                        <li class="skill-item" data-aos="fade-up-right" data-aos-duration="1800">
                             <img
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-original.svg" />
                             <span>illust</span>
                         </li>
-                        <li class="skill-item">
+                        <li class="skill-item" data-aos="fade-up-right" data-aos-duration="2100">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
                                 alt="Figma" />
                             <span>Figma</span>
                         </li>
-                          <li class="skill-item">
-                            <img
-                                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/excel/excel-original.svg" />
+                        <li class="skill-item" data-aos="fade-up-right" data-aos-duration="2400">
+                            <img src="img/excel_icon.png" />
                             <span>excel</span>
                         </li>
-                        <li class="skill-item">
+                        <li class="skill-item" data-aos="fade-up-right" data-aos-duration="2700">
                             <img
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualbasic/visualbasic-original.svg" />
                             <span>visualbasic</span>
                         </li>
-                        <li class="skill-item">
-
+                        <li class="skill-item" data-aos="fade-up-right" data-aos-duration="3000">
                             <img
                                 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" />
                             <span>github</span>
                         </li>
                     </ul>
-               
-            </div>
-            <div id="Certificates">
-                    <h2>Certificates</h2>
+
+                </div>
+                <div id="Certificates">
+                    <h2 data-aos="flip-down">Certificates</h2>
                     <ul class="certifcates">
-                        <li class="certificate">
+                        <li class="certificate" data-aos="fade-up-left" data-aos-duration="300">
                             웹개발디자인
                         </li>
-                        <li class="certificate">
+                        <li class="certificate" data-aos="fade-up-left" data-aos-duration="600">
                             정보처리기사
                         </li>
-                        <li class="certificate">
+                        <li class="certificate" data-aos="fade-up-left" data-aos-duration="900">
                             GTQ 1급
                         </li>
-                        <li class="certificate">
+                        <li class="certificate" data-aos="fade-up-left" data-aos-duration="1200">
                             전자출판기능사
                         </li>
-                        <li class="certificate">
+                        <li class="certificate" data-aos="fade-up-left" data-aos-duration="1500">
                             컴퓨터활용능력2급
                         </li>
-                        <li class="certificate">
+                        <li class="certificate" data-aos="fade-up-left" data-aos-duration="1800">
                             실용글쓰기3급
                         </li>
                     </ul>
@@ -160,62 +187,128 @@
         <!-- Archive -->
         <section id="archive" class="section-wrap">
             <div class="section-inner showUp">
-                <h2>Archive</h2>
-                <div class="card-grid">
-                    <!-- 반복 요소 예시 -->
-                    <article class="card">
-                        <div class="card-info overlay">
-                            <h3>네이버</h3>
-                            <p>#Clone Coding #HTML #CSS #JS</p>
+                <div class="archive-box">
+                    <h2>Archive</h2>
+                    <h3 class="sub-tit">WEB</h3>
+                    <div class="card-grid">
+                        <!-- 반복 요소 예시 -->
+                        <article class="card">
+                            <a href="naver.html">
+                                <div class="card-info overlay">
+                                    <h3>네이버</h3>
+                                    <p>#Clone Coding #HTML #CSS #JS</p>
+                                </div>
+                                <div class="card-img">
+                                    <img src="/img/127.0.0.1_5500_naver.html.png" alt="네이버 클론 코딩 페이지 스크롤샷 이미지" />
+                                </div>
+                                <div class="card-button overlay">
+                                    <p>바로가기</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="card">
+                            <a href="isacTost.html">
+                                <div class="card-info overlay">
+                                    <h3>이삭토스트</h3>
+                                    <p>#Clone Coding #HTML #CSS #JS</p>
+
+                                </div>
+                                <div class="card-img">
+                                    <img src="/img/isacTost.html.png" alt="이삭토스트 클론 코딩 페이지 스크롤샷 이미지" />
+                                </div>
+                                <div class="card-button overlay">
+                                    <p>바로가기</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="card">
+                            <div class="card-info overlay">
+                                <h3>이지트립</h3>
+                                <p>#Clone Coding #HTML #CSS #JS</p>
+                            </div>
+                            <div class="card-img">
+                                <!-- <img src="assets/images/sample1.jpg" alt="감정 이미지" /> -->
+                            </div>
+                            <div class="card-button overlay">
+                                <p>바로가기</p>
+                            </div>
+                        </article>
+
+                        <!-- 더 많은 카드들... -->
+                    </div>
+                </div>
+                <div class="archive-box">
+                    <h3 class="sub-tit">SNS Banner</h3>
+                    <div class="autoplay">
+                        <div class="slick-card" style="background-image: url(./img/banner01.jpg);">
+                            <!-- <img src="img/banner01.jpg" alt=""> -->
                         </div>
-                        <div class="card-img">
-                          <!-- <img src="assets/images/sample1.jpg" alt="감정 이미지" /> -->
+                        <div class="slick-card" style="background-image: url(./img/banner02.jpg);">
+                            <!-- <img src="img/banner02.jpg" alt=""> -->
                         </div>
-                        <div class="card-button overlay">
-                            <p>바로가기</p>
+                        <div class="slick-card" style="background-image: url(./img/banner03.jpg);">
+                            <!-- <img src="img/banner03.jpg" alt=""> -->
                         </div>
-                    </article>
-                   <article class="card">
-                        <div class="card-info overlay">
-                            <h3>이삭토스트</h3>
-                            <p>#Clone Coding #HTML #CSS #JS</p>
+                        <div class="slick-card" style="background-image: url(./img/banner04.png);">
+                            <!-- <img src="img/banner04.png" alt=""> -->
                         </div>
-                        <div class="card-img">
-                          <!-- <img src="assets/images/sample1.jpg" alt="감정 이미지" /> -->
+                        <div class="slick-card" style="background-image: url(./img/banner05.jpg);">
+                            <!-- <img src="img/banner05.jpg" alt=""> -->
                         </div>
-                        <div class="card-button overlay">
-                            <p>바로가기</p>
+                        <div class="slick-card" style="background-image: url(./img/banner06.jpg);">
+                            <!-- <img src="img/banner06.jpg" alt=""> -->
                         </div>
-                    </article>
-                    <article class="card">
-                        <div class="card-info overlay">
-                            <h3>이지트립</h3>
-                            <p>#Clone Coding #HTML #CSS #JS</p>
+                        <div class="slick-card" style="background-image: url(./img/banner07.jpg);">
+                            <!-- <img src="img/banner07.jpg" alt=""> -->
                         </div>
-                        <div class="card-img">
-                          <!-- <img src="assets/images/sample1.jpg" alt="감정 이미지" /> -->
+                    </div>
+
+                </div>
+                <div class="archive-box">
+                    <h3 class="sub-tit">Character</h3>
+                    <div class="character-box">
+                        <div class="egg">
+                            <span>click</span>
+                            <img src="./img/character01-11.png" alt="">
+                         </div>
+                        <div class="egg">
+                             <span>click</span>
+                            <img src="./img/character02-9.png" alt="">
                         </div>
-                        <div class="card-button overlay">
-                            <p>바로가기</p>
+                        <div class="egg">
+                             <span>click</span>
+                            <img src="./img/character03-4.png" alt="">
                         </div>
-                    </article>
-                   
-                    <!-- 더 많은 카드들... -->
+                        <div class="egg">
+                             <span>click</span>
+                            <img src="./img/character04-1.png" alt="">
+                        </div>
+                        <div class="egg">
+                             <span>click</span>
+                            <img src="./img/character05-18.png" alt="">
+                        </div>
+                        <div class="egg">
+                             <span>click</span>
+                            <img src="./img/character06-22.png" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact -->
-        <section id="contact" class="section-wrap">
+        <footer id="contact" class="section-wrap">
             <div class="section-inner showUp">
                 <h2>Contact</h2>
                 <ul class="sns-links">
-                     <li><a href="#">Portfolio by jiyoung.</a></li>
-                    <li><a href="#"><span class="tit">e-mail</span><span class="text">ghqkdaos4767@naver.com</span></a></li>
+                    <li><a href="#">Portfolio by jiyoung.</a></li>
+                    <li><a href="#"><span class="tit">e-mail</span><span class="text">ghqkdaos4767@naver.com</span></a>
+                    </li>
                     <li><a href="#"><span class="tit">tel</span><span class="text">010-4767-3869</span></a></li>
                 </ul>
             </div>
-        </section>
+            <p class="copyright">&copy; 2025 All rights reserved.</p>
+        </footer>
 
 
 
@@ -233,15 +326,17 @@
       <p>이 사이트는 감정과 기억을 시각적으로 정리한 아카이브입니다.</p>
     </div> -->
         </section>
-
-
-        <!-- Footer -->
-        <footer class="site-footer">
-            <p>&copy; 2025 Visual Archive. All rights reserved.</p>
-        </footer>
-
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="js/script.js"></script>
-       
+         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="pofol.js"></script>
+    </div>
+    <div class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-box">
+            
+        </div>
     </div>
 </body>
 
