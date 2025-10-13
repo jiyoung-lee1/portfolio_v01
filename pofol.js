@@ -96,7 +96,23 @@ window.addEventListener('scroll', () => {
         slidesToShow: 3,           // 한 화면에 3개
         autoplay: true,
         autoplaySpeed: 2000,
-        arrows: false
+        arrows: false,
+         responsive: [
+    {
+      breakpoint: 1280,
+      settings: {
+        slidesToShow: 3,
+        centerPadding: '10px'
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        centerPadding: '20px'
+      }
+    }
+  ]
     });
     $('.character-box').slick({
         slidesToShow: 3,
@@ -246,3 +262,62 @@ k3box.on('mouseover',()=>{
 k3box.on('mouseout',()=>{
     $('.k3').removeClass('highlight');
 });
+// archive박스 내 콘텐츠 스크롤
+
+// document.querySelectorAll('.text-tit span').forEach(span => {
+//   span.addEventListener('click', () => {
+//     const currentY  = document.scrollY;
+//     const targetId = span.dataset.target;
+//     const target = document.getElementById(targetId);
+
+//     document.querySelectorAll('.text-tit span').forEach(s => s.classList.remove('select'));
+//     span.classList.add('select');
+
+//     target.scrollIntoView({
+//       behavior: 'smooth',
+//       block: 'start'
+//     });
+//     target.scrollIntoView()
+//     document.scrollIntoView(scrollY);
+//   });
+// });
+const container = document.querySelector('.box-inner');
+document.querySelectorAll('.text-tit span').forEach(span => {
+  span.addEventListener('click', () => {
+    const targetId = span.dataset.target;
+    const target = document.getElementById(targetId);
+
+    // 탭 선택 효과
+    document.querySelectorAll('.text-tit span').forEach(s => s.classList.remove('select'));
+    span.classList.add('select');
+
+    // 내부 스크롤 이동
+    container.scrollTo({
+      top: target.offsetTop,
+      behavior: 'smooth'
+    });
+  });
+});
+// let tabBtns = document.querySelectorAll('.tab-tbn');
+// let boxs = document.querySelectorAll('.archive-box');
+
+// container.addEventListener('scroll', () => {
+//     const scrollTop = container.scrollTop;
+
+//     const box0Top = boxs[0].offsetTop - container.offsetTop;
+//     const box1Top = boxs[1].offsetTop - container.offsetTop;
+//     const box2Top = boxs[2].offsetTop - container.offsetTop;
+
+//     if (scrollTop >= box0Top && scrollTop < box1Top) {
+//         tabBtns.forEach(s => s.classList.remove('select'));
+//         tabBtns[0].classList.add('select'); // WEB
+//     } 
+//     else if (scrollTop >= box1Top && scrollTop < box2Top) {
+//         tabBtns.forEach(s => s.classList.remove('select'));
+//         tabBtns[1].classList.add('select'); // SNS
+//     } 
+//     else if (scrollTop >= box2Top) {
+//         tabBtns.forEach(s => s.classList.remove('select'));
+//         tabBtns[2].classList.add('select'); // CHARACTER
+//     }
+// });
