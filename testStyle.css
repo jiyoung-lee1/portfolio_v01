@@ -680,6 +680,7 @@ body::-webkit-scrollbar {
 
 .naver-shortcut, .issac-shortcut {
     display: none;
+    overflow: hidden;
 }
 
 .view {

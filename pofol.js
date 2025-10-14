@@ -200,13 +200,13 @@
     });
    
     const container = document.querySelector('.box-inner');
-    document.querySelectorAll('.text-tit span').forEach(span => {
+    document.querySelectorAll('.tab-btn-container span').forEach(span => {
     span.addEventListener('click', () => {
         const targetId = span.dataset.target;
         const target = document.getElementById(targetId);
 
         // 탭 선택 효과
-        document.querySelectorAll('.text-tit span').forEach(s => s.classList.remove('select'));
+        document.querySelectorAll('.tab-btn-container span').forEach(s => s.classList.remove('select'));
         span.classList.add('select');
 
         // 내부 스크롤 이동
