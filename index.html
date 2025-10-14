@@ -5,6 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jeong's portfolio</title>
+    <!-- 기본 파비콘 -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <!-- SVG 파비콘 (지원 브라우저용) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+    <!-- 애플 아이콘 (iOS 홈화면용) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <!-- 웹앱 매니페스트 (PWA 등 확장용) -->
+    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="css/98.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -18,13 +27,9 @@
 </head>
 
 <body>
-    <!-- <div class="loading">
-    </div> -->
-
     <div id="wrap">
-       
         <!-- 헤더 -->
-        <header id="header" class="active">
+        <header id="header">
             <div class="container">
                 <h1 class="logo"><a href="#"><span>jeong's portfolio</span></a></h1>
                 <nav class="main-nav">
@@ -41,40 +46,41 @@
             <main>
                 <!-- 메인 비주얼 -->
                 <section id="main">
-                    <div id="main-inner" class="section-inner">
+
+                    <div class="section-inner">
                         <div id="main-text-wrap">
-                            <p data-aos-anchor="#main" data-aos="fade-down">
+                            <p data-aos="fade-down">
                                 <span class="seconFont"><span style="color:var(--main-color)">E</span>XPLORE</span>
-                                <span class="sub-txt" data-aos-anchor="#main" data-aos="flip-up" data-aos-delay="1100">/*FREELY*/</span>
+                                <span class="sub-txt" data-aos-anchor="#main" data-aos="flip-up"
+                                    data-aos-delay="1100">/*FREELY*/</span>
                             </p>
                             <p>
-                                <span data-aos-anchor="#main" data-aos="fade-right"  data-aos-delay="600" class="seconFont"><span
-                                        style="color:var(--main-color)">D</span>IG</span>
-                                <span class="sub-txt" data-aos-anchor="#main" data-aos="flip-up" data-aos-delay="1200"> /*DEEP*/</span>
+                                <span data-aos-anchor="#main" data-aos="fade-right" data-aos-delay="1000"
+                                    class="seconFont"><span style="color:var(--main-color)">D</span>IG</span>
+                                <span class="sub-txt" data-aos-anchor="#main" data-aos="flip-up" data-aos-delay="1200">
+                                    /*DEEP*/</span>
                             </p>
                             <P class="right-txt">
-                                <span class="seconFont"  data-aos-anchor="#main" data-aos="fade-right"  data-aos-delay="800" class="seconFont">MAKE</span><span>/*<img src="/text_deco.png" width="80px" height="80px" alt=""  data-aos="zoom-out" data-aos-delay="1500">*/</span>
+                                <span class="seconFont" data-aos-anchor="#main" data-aos="fade-right"
+                                    data-aos-delay="800" class="seconFont">MAKE</span><span>/*<img src="/text_deco.png"
+                                        width="80px" height="80px" alt="" data-aos="zoom-out"
+                                        data-aos-delay="1500">*/</span>
                             </P>
-                            <p><span class="seconFont" style="color:var(--main-color)"  data-aos-anchor="#main" data-aos="fade-up"  data-aos-delay="900" >DELIVER WEB</span> 
+                            <p><span class="seconFont" style="color:var(--main-color)" data-aos-anchor="#main"
+                                    data-aos="fade-up" data-aos-delay="900">DELIVER WEB</span>
                             </p>
                         </div>
-                        <div class="progress-container">
-                            <progress class="progress" id="progress" min="0" max="100"></progress>
-                            <img src="./profile_img.png" alt="" class="runner">
-                        </div>
+                        <a href="#about" class="scroll-down-btn">
+                            <div class="chevron"></div>
+                            <span class="text">Scroll down</span>
+                        </a>
                     </div>
                 </section>
             </main>
             <!-- About -->
-            <!-- 피그마에서 제작한 소개시안 가로 스크롤로 넣기, swipe사용해서 -->
             <section id="about" class="section-wrap">
                 <div class="section-inner">
-                    <!-- <h2>About</h2> -->
-                    <div class="">
-                        <!-- <p class="img">
-                        <img src="./profile_img.png" alt="프로필이미지">
-                    </p> -->
-                        <!-- <p class="tit">전달력 있는 웹을 제작하는 퍼블리셔</p> -->
+                    <div>
                         <p class="tit"><span data-aos="fade-up">전달력이 좋은 웹을 제작하는 퍼블리셔</span></p>
                         <div class="keyword-box-wrap">
                             <div class="keyword-box k1box" data-aos="flip-left">
@@ -88,17 +94,14 @@
                             </div>
                         </div>
                         <p class="txt">
-                            <!-- 소통과 정보 교환이 가장 활발하게 일어나는 공간이 웹이니까 그곳에서 영향력을 뽐내고 싶어요. -->
-                           웹은 단순한 정보 전달을 넘어, 사용자의 경험을 디자인하는 공간이라고 생각합니다.
-                            저는 <mark class="k1">이질감으로 흥미를</mark>, <mark class="k2">익숙함으로 안정감을</mark>, <mark class="k3">인터렉션으로 몰입을</mark> 더해
+                            웹은 단순한 정보 전달을 넘어, 사용자의 경험을 디자인하는 공간이라고 생각합니다.
+                            저는 <mark class="k1">이질감으로 흥미를</mark>, <mark class="k2">익숙함으로 안정감을</mark>, <mark
+                                class="k3">인터렉션으로 몰입을</mark> 더해
                             사용자가 머무르고 싶은 웹을 만드는 것을 목표로 합니다.
                             낯설지만 편안하고, 단순하지만 기억에 남는 웹 —
                             그 미묘한 균형 속에서 진짜 ‘전달력 있는 웹’을 완성해가고 있습니다.
                         </p>
-                        <!-- <div class="progress-container">
-                    <progress class="progress" id="progress" min="0" max="100">헐랭</progress>
-                    <img src="./profile_img.png" alt="" class="runner">
-                    </div> -->
+
                         <a href="#skill" class="scroll-down-btn">
                             <div class="chevron"></div>
                             <span class="text">Scroll down</span>
@@ -187,39 +190,39 @@
                             </li>
                         </ul>
                     </div>
-                    
+
                 </div>
-                    <!-- <a href="#archive" class="scroll-down-btn">
-                        <div class="chevron"></div>
-                        <span class="text">Scroll down</span>
-                    </a> -->
+                <a href="#archive" class="scroll-down-btn">
+                    <div class="chevron"></div>
+                    <span class="text">Scroll down</span>
+                </a>
             </section>
 
             <!-- Archive -->
             <section id="archive" class="section-wrap">
                 <div class="section-inner">
                     <h2>Archive</h2>
-                    <h3 class="text-tit"><span class="select tab-tbn" data-target="web">WEB</span><span class="tab-tbn" data-target="snsBanner">SNS</span><span class="tab-tbn" data-target="character">CHARACTER</span></h3>
+                    <h3 class="text-tit"><span class="select tab-btn" data-target="web">WEB</span><span class="tab-btn"
+                            data-target="snsBanner">SNS</span><span class="tab-btn"
+                            data-target="character">CHARACTER</span></h3>
                     <div class="box-inner">
                         <div class="archive-box" id="web">
-                            <div class="card-grid">
-                                <!-- 98.css version -->
+                            <div class="card-box">
                                 <div class="site-shortcut">
                                     <p class="naver-shortcut-button">네이버</p>
                                     <p class="isaac-shortcut-button">이삭</p>
                                 </div>
                                 <div class="card window">
                                     <div class="title-bar">
-                                        <div class="title-bar-text">NAVER</div>
+                                        <div class="title-bar-text naver-tit view">NAVER</div>
+                                        <div class="title-bar-text issac-tit">ISAAC</div>
                                         <div class="title-bar-controls">
-                                            <!-- <button aria-label="Minimize"></button> -->
                                             <button class="Maximize" aria-label="Maximize"></button>
                                             <button class="Close" aria-label="Close"></button>
                                         </div>
                                     </div>
                                     <div class="window-body card-inner">
                                         <a class="naver-shortcut view" href="naver.html">
-                                            <!-- <p>There's so much room for activities!</p> -->
                                             <img src="/img/127.0.0.1_5500_naver.html.png"
                                                 alt="네이버 클론 코딩 페이지 스크롤샷 이미지" />
                                         </a>
@@ -233,120 +236,89 @@
 
                             </div>
                         </div>
-                    
-                    <div class="archive-box" id="snsBanner">
-                        <!-- <h3 class="sub-tit">SNS Banner</h3> -->
-                        <div class="autoplay">
-                            <div class="slick-card" style="background-image: url(./img/banner01.jpg);">
-                                <!-- <img src="img/banner01.jpg" alt=""> -->
-                            </div>
-                            <div class="slick-card" style="background-image: url(./img/banner02.jpg);">
-                                <!-- <img src="img/banner02.jpg" alt=""> -->
-                            </div>
-                            <div class="slick-card" style="background-image: url(./img/banner03.jpg);">
-                                <!-- <img src="img/banner03.jpg" alt=""> -->
-                            </div>
-                            <div class="slick-card" style="background-image: url(./img/banner04.png);">
-                                <!-- <img src="img/banner04.png" alt=""> -->
-                            </div>
-                            <div class="slick-card" style="background-image: url(./img/banner05.jpg);">
-                                <!-- <img src="img/banner05.jpg" alt=""> -->
-                            </div>
-                            <div class="slick-card" style="background-image: url(./img/banner06.jpg);">
-                                <!-- <img src="img/banner06.jpg" alt=""> -->
-                            </div>
-                            <div class="slick-card" style="background-image: url(./img/banner07.jpg);">
-                                <!-- <img src="img/banner07.jpg" alt=""> -->
-                            </div>
-                        </div>
 
-                    </div>
-                    <div class="archive-box" id="character">
-                        <!-- <h3 class="sub-tit">Character</h3> -->
-                        <div class="character-box">
-                            <div class="egg">
-                                <span>click</span>
-                                <img src="./img/character01-11.png" alt="">
+                        <div class="archive-box" id="snsBanner">
+                            <div class="autoplay">
+                                <div class="slick-card" style="background-image: url(./img/banner01.jpg);">
+                                </div>
+                                <div class="slick-card" style="background-image: url(./img/banner02.jpg);">
+                                </div>
+                                <div class="slick-card" style="background-image: url(./img/banner03.jpg);">
+                                </div>
+                                <div class="slick-card" style="background-image: url(./img/banner04.png);">
+                                </div>
+                                <div class="slick-card" style="background-image: url(./img/banner05.jpg);">
+                                </div>
+                                <div class="slick-card" style="background-image: url(./img/banner06.jpg);">
+                                </div>
+                                <div class="slick-card" style="background-image: url(./img/banner07.jpg);">
+                                </div>
                             </div>
-                            <div class="egg">
-                                <span>click</span>
-                                <img src="./img/character02-9.png" alt="">
-                            </div>
-                            <div class="egg">
-                                <span>click</span>
-                                <img src="./img/character03-4.png" alt="">
-                            </div>
-                            <div class="egg">
-                                <span>click</span>
-                                <img src="./img/character04-1.png" alt="">
-                            </div>
-                            <div class="egg">
-                                <span>click</span>
-                                <img src="./img/character05-18.png" alt="">
-                            </div>
-                            <div class="egg">
-                                <span>click</span>
-                                <img src="./img/character06-22.png" alt="">
+
+                        </div>
+                        <div class="archive-box" id="character">
+                            <div class="character-box">
+                                <div class="egg">
+                                    <span>click</span>
+                                    <img src="./img/character01-11.png" alt="">
+                                </div>
+                                <div class="egg">
+                                    <span>click</span>
+                                    <img src="./img/character02-9.png" alt="">
+                                </div>
+                                <div class="egg">
+                                    <span>click</span>
+                                    <img src="./img/character03-4.png" alt="">
+                                </div>
+                                <div class="egg">
+                                    <span>click</span>
+                                    <img src="./img/character04-1.png" alt="">
+                                </div>
+                                <div class="egg">
+                                    <span>click</span>
+                                    <img src="./img/character05-18.png" alt="">
+                                </div>
+                                <div class="egg">
+                                    <span>click</span>
+                                    <img src="./img/character06-22.png" alt="">
+                                </div>
                             </div>
                         </div>
-                        <!-- <a href="#contact" class="scroll-down-btn">
-                        <div class="chevron"></div>
-                        <span class="text">Scroll down</span>
-                </a> -->
-                    </div>
                     </div>
 
                 </div>
             </section>
-
-            
-
-
-
-            <!-- 테스트 -->
-            <section id="test" class="xscroll">
-                <div class="xscroll-iner">
-                    <div class="panel">피그마 소개 페이지 들어갈 곳</div>
-                    <div class="panel">About 2</div>
-                    <div class="panel">About 3</div>
-                    <!-- 원하는 만큼 -->
-                </div>
-                <!-- </section>
-    <div class="section-inner">
-      <h2>About</h2>
-      <p>이 사이트는 감정과 기억을 시각적으로 정리한 아카이브입니다.</p>
-    </div> -->
-            </section>
-            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-            <script src="js/script.js"></script>
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script type="text/javascript"
-                src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-            <script src="pofol.js"></script>
         </div>
-        <div class="modal">
-            <span class="close">&times;</span>
-            <div class="modal-box">
 
-            </div>
-        </div>
         <!-- Contact -->
-            <footer id="contact" class="section-wrap" data-aos="fade-down">
-                <div class="section-inner">
-                    <h2>Contact</h2>
-                    <ul class="sns-links">
-                        <li><a href="#" data-aos="fade-right" data-aos-delay="400">Portfolio by jiyoung.</a></li>
-                        <li><a href="#"><span class="tit">e-mail</span><span class="text" data-aos="fade-right"
-                                    data-aos-delay="400">ghqkdaos4767@naver.com</span></a>
-                        </li>
-                        <li><a href="#"><span class="tit">tel</span><span class="text" data-aos="fade-right"
-                                    data-aos-delay="600">010-4767-3869</span></a></li>
-                    </ul>
-                </div>
-                <p class="copyright">&copy; 2025 All rights reserved.</p>
-            </footer>
+        <footer id="contact" class="section-wrap" data-aos="fade-down">
+            <div class="section-inner">
+                <h2>Contact</h2>
+                <ul class="sns-links">
+                    <li><a href="#" data-aos="fade-right" data-aos-delay="400">Portfolio by jiyoung.</a></li>
+                    <li><a href="#"><span class="tit">e-mail</span><span class="text" data-aos="fade-right"
+                                data-aos-delay="400">ghqkdaos4767@naver.com</span></a>
+                    </li>
+                    <li><a href="#"><span class="tit">tel</span><span class="text" data-aos="fade-right"
+                                data-aos-delay="600">010-4767-3869</span></a></li>
+                </ul>
+            </div>
+            <p class="copyright">&copy; 2025 All rights reserved.</p>
+        </footer>
     </div>
 
+    <!-- modal -->
+    <div class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-box">
+
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="pofol.js"></script>
 </body>
 
 </html>
