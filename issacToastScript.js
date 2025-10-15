@@ -5,12 +5,11 @@ AOS.init();
 $(document).ready(function () {
     $("#gnb ul li").hover(
         function () {
-            // alert("올림");
             $("#gnb ul li dl").stop().slideDown(300);
+            $("#gnb_bg").css("opacity", "1");
             $("#gnb_bg").stop().slideDown(300);
         },
         function () {
-            // alert("내림");
             $("#gnb ul li dl").stop().slideUp(300);
             $("#gnb_bg").stop().slideUp(300);
         }

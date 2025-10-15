@@ -238,8 +238,6 @@
         box-sizing: border-box;
         transition: transform 0.3s linear;
         z-index: 10;
-        overflow: hidden;
-        /* display: none; */
     }
 
     #header:before {
@@ -273,6 +271,7 @@
         left: 0;
         z-index: 10;
         background-color: #ffffff;
+        opacity: 0;
     }
 
     #header .header_in {
