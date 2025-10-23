@@ -568,6 +568,18 @@ section.section-inner h3 {
     background-repeat: no-repeat;
 }
 
+#archive .section-inner .web-archive li a {
+    display: block;
+    position:relative;
+    background-color: #000;
+
+}
+#archive .section-inner .web-archive li:hover img {
+    position:absolute;
+    transform: translateY(-60%);
+    opacity: .5;
+    transition: all 0.3s;
+}
 .tab-btn-container {
     display: flex;
     justify-content: end;
